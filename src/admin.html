@@ -6,15 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gataki | Admin</title>
     <link rel="stylesheet" href="./css/_main.scss">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
     <div class="grid-container">
         <header>
-            <!-- <picture>
-                <source srcset="./images/logo.png?as=webp&width=183" type="image/png">
-                <img src="./images/logo.png?width=183" alt="Logotyp" class="logo">
-            </picture> -->
+            <!-- PNG optimeras till WebP -->
+            <a href="index.html">
+                <picture>
+                    <source srcset="./images/logo.png?as=webp&width=295" type="image/png">
+                    <img src="./images/logo.png?width=295" alt="Logotyp" class="logo">
+                </picture>
+            </a>
 
             <!-- Responsiv meny -->
             <div class="navigation"></div>
@@ -45,11 +52,13 @@
         <div class="colorChangeBar"></div>
 
         <main>
-            <!--<div class="image-container">
+            <div class="hero-container">
+                <!-- JPG optimeras till WebP -->
                 <picture>
-                    <source srcset="./images/mountain.jpg?as=webp&width=1512" type="image/webp">
-                    <img src="./images/mountain.jpg?width=1512" alt="Vy över Iona">
-                </picture> -->
+                    <source srcset="./images/admin.jpg?as=webp&width=1512" type="image/webp">
+                    <img src="./images/admin.jpg?width=1512" alt="Citroner och körsbär på en skärbräda">
+                </picture>
+            </div>
 
                 <h1>Admin</h1>
 
@@ -64,15 +73,15 @@
 
         <footer>
             <div class="footer-container">
-                <p><!--<i class="fa-regular fa-envelope"></i>&nbsp;<a href=mailto:sali1502@student.miun.se>Kontakta oss
-                        via e-post</a><br> -->
-                    &copy;&nbsp;Åsa Lindskog 2024        
+                <p><i class="fa-regular fa-envelope"></i>&nbsp;<a href=mailto:sali1502@student.miun.se>Kontakta oss
+                        via e-post</a><br>
+                    &copy;&nbsp;Åsa Lindskog 2024
                 </p>
             </div>
         </footer>
 
     </div>
-    <!-- <script src="https://kit.fontawesome.com/89fb6a41df.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/89fb6a41df.js" crossorigin="anonymous"></script>
     <script type="module" src="js/main.js"></script>
 </body>
 
