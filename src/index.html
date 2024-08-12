@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gataki</title>
+    <link rel="stylesheet" href="./css/_main.scss">
+</head>
+
+<body>
+    <div class="grid-container">
+        <header>
+
+            <!-- PNG optimeras till WebP -->
+            <a href="index.html">
+                <picture>
+                    <source srcset="./images/logo.png?as=webp&width=295" type="image/png">
+                    <img src="./images/logo.png?width=295" alt="Logotyp" class="logo">
+                </picture>
+            </a>
+
+            <!-- Responsiv meny -->
+            <div class="navigation"></div>
+            <button class="menu-btn open" id="open-menu">
+                <span class="menu-icon">
+                    <span class="bars"></span>
+                    <span class="bars"></span>
+                    <span class="bars"></span>
+                </span>
+                <span class="menu-text">Meny</span>
+            </button>
+
+            <nav id="nav-menu">
+                <button class="menu-btn close" id="close-menu">
+                    <span class="menu-icon">
+                        <span class="bars cross1"></span>
+                        <span class="bars cross2"></span>
+                    </span>
+                    <span class="menu-text">Stäng</span>
+                </button>
+                <ul>
+                    <li><a href="index.html"><strong>Hem</strong></a></li>
+                    <li><a href="#menu"><strong>Meny</strong></a></li>
+                    <li><a href="#about"><strong>Om oss</strong></a></li>
+                    <li><a href="#contact"><strong>Kontakt</strong></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Animerad linje -->
+        <div class="colorChangeBar"></div>
+
+        <!-- JPG optimeras till WebP -->
+        <main>
+            <div class="hero-container">
+                <picture>
+                    <source srcset="./images/hero.jpg?as=webp&width=1512" type="image/webp">
+                    <img src="./images/hero.jpg?width=1512" alt="Cafébord med två stolar och en krukväxt">
+                </picture>
+            </div>
+
+            <div class="text-container">
+                <h1>Gataki</h1>
+                <p>Text om Gataki...</p>
+            </div>
+
+            <!-- JPG optimeras till WebP -->
+            <div class="image-container">
+                <picture>
+                    <source srcset="./images/food.jpg?as=webp&width=1512" type="image/webp">
+                    <img src="./images/hero.jpg?width=1512" alt="Urval av caféets utbud med bild och text">
+                </picture>
+            </div>
+
+            <div class="text-container">
+                <div id="menu" class="heading">
+                    <h1>Meny</h1>
+                </div>
+                <p>Dynamiskt utskriven meny...</p>
+            </div>
+
+            <!-- PNG optimeras till WebP -->
+            <div class="cutlery-container">
+                <picture>
+                    <source srcset="./images/cutlery.png?as=webp&width=1512" type="image/webp">
+                    <img src="./images/cutlery.png?width=1512" alt="Grafisk bild med korslagda bestick">
+                </picture>
+            </div>
+
+            <div class="text-container">
+                <div id="about" class="heading">
+                    <h1>Om oss</h1>
+                </div>
+                <p>Text om oss...</p>
+            </div>
+
+            <!-- JPG optimeras till WebP -->
+            <div class="image-container">
+                <picture>
+                    <source srcset="./images/cat.jpg?as=webp&width=1512" type="image/webp">
+                    <img src="./images/cat.jpg?width=1512" alt="En kattunge på en lerväg">
+                </picture>
+            </div>
+
+            <div class="text-container">
+                <div id="contact" class="heading">
+                    <h1>Kontakt</h1>
+                </div>
+                <p>Kontaktformulär...</p>
+            </div>
+
+            <h2>Hitta hit</h2>
+
+            <!-- JPG optimeras till WebP -->
+            <div class="image-container">
+                <picture>
+                    <source srcset="./images/cafe.jpg?as=webp&width=1512" type="image/webp">
+                    <img src="./images/cafe.jpg?width=1512" alt="Detaljbild på kaffekoppar med välkomsttext">
+                </picture>
+            </div>
+    </div>
+    </main>
+
+    <div class="space"></div>
+
+    <footer>
+        <div class="footer-container">
+            <p><!--<i class="fa-regular fa-envelope"></i>&nbsp;<a href=mailto:sali1502@student.miun.se>Kontakta oss
+                    via e-post</a><br> -->
+                &copy;&nbsp;Åsa Lindskog 2024 <a href="login.html"><strong>Logga in</strong></a>
+            </p>
+        </div>
+    </footer>
+
+    </div>
+    <!-- <script src="https://kit.fontawesome.com/89fb6a41df.js" crossorigin="anonymous"></script> -->
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
