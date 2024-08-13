@@ -14,7 +14,7 @@
     grid-template-columns: 2fr;
     grid-gap: 0px;
     padding: 0px;
-    background-color: base.$white;
+    background-color: base.$primary-bg;
     padding: 0px;
     width: 100%;
     max-width: 1512px;
@@ -137,7 +137,7 @@ nav li:hover {
     top: -3px;
 }
 
-.logo {    
+.logo {
     display: block;
     justify-content: left;
     position: relative;
@@ -182,10 +182,8 @@ p {
     margin: 0 auto;
     font-size: 1em;
     line-height: 1.8em;
-    text-align: center;
-    padding-bottom: 2vh;
+    text-align: left;
     color: base.$primary-text;
-    max-width: 750px;
 }
 
 ul {
@@ -197,20 +195,33 @@ ul {
     max-width: 550px;
 }
 
-.hero-container {
+.hero-container-large {
     display: block;
     justify-content: center;
     margin: 0 auto 0 auto;
-    text-align: center;
-    width: 80%;
+    width: 100%;
 }
 
-.image-container {
+.hero-container-small {
+    display: none;
+}
+
+.food-container-large {
     display: block;
     justify-content: center;
     margin: 0 auto 0 auto;
-    text-align: center;
-    width: 60%;
+    width: 70%;
+}
+
+.food-container-small {
+    display: none;
+}
+
+.cat-container-large {
+    display: block;
+    justify-content: center;
+    margin: 0 auto 0 auto;
+    width: 70%;
 }
 
 .cutlery-container {
@@ -218,8 +229,27 @@ ul {
     display: block;
     justify-content: center;
     margin: 0 auto 0 auto;
-    text-align: center;
-    width: 8%;
+    width: 70px;
+}
+
+.cafe-container-large {
+    display: block;
+    justify-content: center;
+    margin: 0 auto 0 auto;
+    width: 70%;
+}
+
+.cafe-container-small {
+    display: none;
+}
+
+.map-container {
+    display: block;
+    justify-content: center;
+    margin: 0 auto 0 auto;
+    width: 70%;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
 }
 
 .text-container {
@@ -230,10 +260,11 @@ ul {
     font-size: 1em;
     line-height: 1.8em;
     color: base.$primary-text;
-    max-width: 750px;
     width: 70%;
-    padding-top: 5vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
     padding-bottom: 5vh;
+    padding-top: 5vh;
 }
 
 .form-container {
@@ -244,8 +275,9 @@ ul {
     font-size: 1em;
     line-height: 1.8em;
     color: base.$primary-text;
-    max-width: 400px;
-    padding-top: 0vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    width: 50%;
     padding-bottom: 10vh;
 }
 
@@ -263,7 +295,7 @@ input[type=text] {
 
 textarea {
     width: 100%;
-    height: 20vh;
+    height: 10vh;
     padding: 5px;
     border-radius: 4px;
     margin-top: 0.5vh;
@@ -272,6 +304,20 @@ textarea {
 
 .text {
     color: base.$primary-text;
+}
+
+img {
+    height: auto;
+    margin: 0 auto 0 auto;
+    width: 100%;
+}
+
+#map {
+    height: 450px;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: block;
+    width: 100%;
 }
 
 .footer-container {
@@ -305,10 +351,10 @@ footer p {
 }
 
 .space {
-    height: 0vh;
+    height: 1vh;
 }
 
-/* ANIMERINGAR */
+/* Animeringar */
 
 // Animering - linje som ändrar färg automatiskt
 .colorChangeBar {
@@ -339,25 +385,12 @@ footer p {
 
 // Animering - bild som kommer in från höger
 #image-animation {
-    @extend .image-container;
+    @extend .hero-container-large;
     animation: imgAnimation;
     animation-duration: 4s;
 }
 
-#map {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    height: 400px;
-    width: 100%;
-}
-
-img {
-    height: auto;
-    margin: 0 auto 0 auto;
-    width: 100%;
-}
-
-/* Media querys */
+/* Media queries */
 
 /* dark mode */
 @media (prefers-color-scheme: dark) {
@@ -439,55 +472,236 @@ img {
         padding: 1.2em 0;
     }
 
-    p {
-        margin-left: 5vw;
-        margin-right: 5vw;
-    }
 }
 
-/* Visar en kolumn för litet läge, mobiltelefon */
 
-@media only screen and (max-width: 600px) {
+/* Visar läge för mediumstor skärm */
+@media only screen and (max-width: 1024px) {
+
+    .hero-container-large {
+        display: block;
+        justify-content: center;
+        margin: 0 auto 0 auto;
+        width: 100%;
+    }
+
+    .hero-container-small {
+        display: none;
+    }
+
+    .food-container-large {
+        display: block;
+        justify-content: center;
+        margin: 0 auto 0 auto;
+        width: 70%;
+    }
+    
+    .food-container-small {
+        display: none;
+    }
+
+    .cat-container-large {
+        display: block;
+        justify-content: center;
+        margin: 0 auto 0 auto;
+        width: 70%;
+    }
+
+    .cutlery-container {
+        margin-top: 10vh;
+        display: block;
+        justify-content: center;
+        margin: 0 auto 0 auto;
+        width: 70px;
+    }
+
+    .cafe-container-large {
+        display: block;
+        justify-content: center;
+        margin: 0 auto 0 auto;
+        width: 70%;
+    }
+    
+    .cafe-container-small {
+        display: none;
+    }
+
+    #map {
+        height: 300px;
+        width: 100%;
+    }
+    
+    .map-container {
+        display: block;
+        justify-content: center;
+        margin: 0 auto 0 auto;
+        width: 70%;
+    }
 
     .text-container {
         display: block;
         justify-content: center;
         margin: 0 auto 0 auto;
         text-align: center;
-        padding-left: 5vw;
-        padding-right: 5vw;
         font-size: 1em;
         line-height: 1.8em;
         color: base.$primary-text;
-        max-width: 550px;
+        width: 70%;
+        padding-left: 2vw;
+        padding-right: 2vw;
     }
 
-    .image-container {
+    .form-container {
         display: block;
         justify-content: center;
         margin: 0 auto 0 auto;
         text-align: center;
+        font-size: 1em;
+        line-height: 1.8em;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        color: base.$primary-text;
+        width: 70%;
     }
+    
+    form {
+        text-align: left;
+    }
+    
+    input[type=text] {
+        width: 100%;
+        padding: 5px;
+        border-radius: 4px;
+        margin-top: 0.5vh;
+        margin-bottom: 1vh;
+    }
+    
+    textarea {
+        width: 100%;
+        height: 10vh;
+        padding: 5px;
+        border-radius: 4px;
+        margin-top: 0.5vh;
+        margin-bottom: 0.5vh;
+    }
+    
 }
 
-@media only screen and (max-width: 1024px) {
+/* Visar en kolumn för litet läge, mobiltelefon */
 
-    // Karta för mindre skärm
-    #searchInput {
-        margin-bottom: 2vh;
+@media only screen and (max-width: 600px) {
+
+    .hero-container-large {
+        display: none;
     }
 
-    #searchBtn {
-        margin-bottom: 2vh;
+    .hero-container-small {
+        display: block;
+        justify-content: center;
+        margin: 0 auto 0 auto;
+        width: 100%;
+    }  
+
+    .food-container-large {
+        display: none;
+    }
+    
+    .food-container-small {
+        display: block;
+        justify-content: center;
+        margin: 0 auto 0 auto;
+        width: 70%;
+    }
+
+    .cat-container-large {
+        display: block;
+        justify-content: center;
+        margin: 0 auto 0 auto;
+        width: 70%;
+    }
+
+    .cutlery-container {
+        margin-top: 10vh;
+        display: block;
+        justify-content: center;
+        margin: 0 auto 0 auto;
+        width: 70px;
+    }
+
+    .cafe-container-large {
+        display: none;
+    }
+    
+    .cafe-container-small {
+        display: block;
+        justify-content: center;
+        margin: 0 auto 0 auto;
+        width: 70%;
     }
 
     #map {
-        height: 450px;
+        height: 300px;
         width: 100%;
     }
+    
+    .map-container {
+        display: block;
+        justify-content: center;
+        margin: 0 auto 0 auto;
+        width: 70%;
+    }
 
+    .text-container {
+        display: block;
+        justify-content: center;
+        margin: 0 auto 0 auto;
+        text-align: center;
+        font-size: 1em;
+        line-height: 1.8em;
+        color: base.$primary-text;
+        width: 100%;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .form-container {
+        display: block;
+        justify-content: center;
+        margin: 0 auto 0 auto;
+        text-align: center;
+        font-size: 1em;
+        line-height: 1.8em;
+        color: base.$primary-text;
+        padding-right: 5vw;
+        padding-left: 5vw;
+        width: 100%;
+    }
+    
+    form {
+        text-align: left;
+    }
+    
+    input[type=text] {
+        width: 100%;
+        padding: 5px;
+        border-radius: 4px;
+        margin-top: 0.5vh;
+        margin-bottom: 1vh;
+    }
+    
+    textarea {
+        width: 100%;
+        height: 10vh;
+        padding: 5px;
+        border-radius: 4px;
+        margin-top: 0.5vh;
+        margin-bottom: 0.5vh;
+    }
+    
     p {
         margin-left: 5vw;
         margin-right: 5vw;
     }
 }
+
+

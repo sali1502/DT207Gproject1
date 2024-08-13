@@ -11,18 +11,16 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-    crossorigin=""/>
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""></script>
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 
 <body>
     <div class="grid-container">
         <header>
 
-            <!-- Klickbar logotyp + PNG optimeras till WebP -->
+            <!-- Klickbar logotyp PNG optimeras till WebP -->
             <a href="index.html">
                 <picture>
                     <source srcset="./images/logo.png?as=webp&width=295" type="image/png">
@@ -61,29 +59,45 @@
         <!-- Animerad linje -->
         <div class="colorChangeBar"></div>
 
-        <!-- Animerad bild + JPG optimeras till WebP -->
+        <!-- JPG optimeras till WebP för desktop och mobil -->
         <main>
-            <div class="hero-container" id="image-animation">
+            <div class="hero-container-large">
                 <picture>
                     <source srcset="./images/hero.jpg?as=webp&width=1512" type="image/webp">
                     <img src="./images/hero.jpg?width=1512" alt="Cafébord med två stolar och en krukväxt">
                 </picture>
             </div>
 
+            <div class="hero-container-small">
+                <picture>
+                    <source srcset="./images/hero_small.jpg?as=webp&width=1512" type="image/webp">
+                    <img src="./images/hero_small.jpg?width=600" alt="Cafébord med två stolar och en krukväxt">
+                </picture>
+            </div>
+
+
             <div class="text-container">
                 <h1>Gataki</h1>
                 <p>Gataki betyder "liten katt" eller "kattunge" på grekiska. Förutom att servera våra gäster
                     i Stockholm medelhavsgodsaker stödjer vi lokala eldsjälar i Chaniaområdet på nordvästra Kreta
-                    som arbetar med att hjälpa hemlösa katter. Tio procent av våra intäkter går direkt till dessa volontärer.
+                    som arbetar med att hjälpa hemlösa katter. Tio procent av våra intäkter går direkt till dessa
+                    volontärer.
                     Läs mer om vår resa och deras arbete <a href="#about"><strong>här</strong></a>
                 </p>
             </div>
 
-            <!-- JPG optimeras till WebP -->
-            <div class="image-container">
+            <!-- JPG optimeras till WebP för desktop och mobil -->
+            <div class="food-container-large">
                 <picture>
                     <source srcset="./images/food.jpg?as=webp&width=1512" type="image/webp">
-                    <img src="./images/hero.jpg?width=1512" alt="Urval av caféets utbud med bild och text">
+                    <img src="./images/food.jpg?width=1512" alt="Urval av caféets utbud med bild och text">
+                </picture>
+            </div>
+
+            <div class="food-container-small">
+                <picture>
+                    <source srcset="./images/food_small.jpg?as=webp&width=1512" type="image/webp">
+                    <img src="./images/food_small.jpg?width=600" alt="Urval av caféets utbud med bild och text">
                 </picture>
             </div>
 
@@ -115,14 +129,15 @@
                     av tema inte svårt.
                     Medelhavstemat var självklart och likaså att en del av vinsten skulle gå till de eldsjälar
                     som arbetat så länge med att hjälpa hemlösa katter (och hundar) i Chania.
-                    Tio procent av caféets försäljning går därför direkt till de volontärer som vi följt under så många år.
+                    Tio procent av caféets försäljning går därför direkt till de volontärer som vi följt under så många
+                    år.
                     Vi är även glada att ha Sebastian med oss i teamet som bidrar stort med sin kulinariska inspiration
                     och expertis.
                 </p>
             </div>
 
             <!-- JPG optimeras till WebP -->
-            <div class="image-container">
+            <div class="cat-container-large">
                 <picture>
                     <source srcset="./images/cat.jpg?as=webp&width=1512" type="image/webp">
                     <img src="./images/cat.jpg?width=1512" alt="En kattunge på en lerväg">
@@ -136,13 +151,13 @@
                 <p>För att komma i kontakt med oss vänligen fyll i formuläret nedan.
                     Vi försöker att återkoppla inom 24 timmar.
                     Om ärendet är brådskande går det även att nå oss på telefon: 0733-12 34 56.
-                    Under lunchtid mellan 11-14 kan det vara svårt för oss att svara. 
+                    Under lunchtid mellan 11-14 kan det vara svårt för oss att svara.
                     Ring därför gärna på vardagar mellan 14-17.
                     Se våra öppettider nedan.
                 </p>
             </div>
 
-            <!-- Formulär för meddelanden till personal + animerad knapp -->
+            <!-- Formulär för att skicka meddelanden + animerad knapp -->
             <div class="form-container">
                 <form method="post" id="messagesForm">
 
@@ -153,7 +168,8 @@
                     <input type="text" id="email" name="email" placeholder="Epost" required><br>
 
                     <label for="message">Meddelande</label><br>
-                    <textarea id="message" name="message" placeholder="Skriv ett meddelande här..." required></textarea><br>
+                    <textarea id="message" name="message" placeholder="Skriv ett meddelande här..."
+                        required></textarea><br>
 
                     <input type="submit" value="Skicka" class="button">
                 </form>
@@ -161,35 +177,40 @@
 
             <h2>Hitta hit</h2>
 
-            <!-- JPG optimeras till WebP -->
-            <div class="image-container">
+            <!-- JPG optimeras till WebP för desktop och mobil -->
+            <div class="cafe-container-large">
                 <picture>
                     <source srcset="./images/cafe.jpg?as=webp&width=1512" type="image/webp">
                     <img src="./images/cafe.jpg?width=1512" alt="Detaljbild på kaffekoppar med välkomsttext">
                 </picture>
             </div>
-    </div>
-    </main>
 
-    <div class="space"></div>
+            <div class="cafe-container-small">
+                <picture>
+                    <source srcset="./images/cafe_small.jpg?as=webp&width=600" type="image/webp">
+                    <img src="./images/cafe_small.jpg?width=600" alt="Detaljbild på kaffekoppar med välkomsttext">
+                </picture>
+            </div>
 
-   <!-- Karta med markör -->
-    <div class="image-container">
-    <div id="map"></div>
-    </div>
-  
-    <footer>
-        <div class="footer-container">
-            <p><i class="fa-regular fa-envelope"></i>&nbsp;<a href=mailto:sali1502@student.miun.se>Kontakta oss
-                    via e-post</a><br>
-                &copy;&nbsp;Åsa Lindskog 2024 <a href="login.html"><strong>Logga in</strong></a>
-            </p>
-        </div>
-    </footer>
+            <!-- Karta med markör -->
+            <div class="map-container">
+                <div id="map"></div>
+            </div>
 
+        </main>
+
+        <footer>
+            <div class="footer-container">
+                <p><i class="fa-regular fa-envelope"></i>&nbsp;<a href=mailto:sali1502@student.miun.se>Kontakta oss
+                        via e-post</a><br>
+                    &copy;&nbsp;Åsa Lindskog 2024 <a href="login.html"><strong>Logga in</strong></a>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://kit.fontawesome.com/89fb6a41df.js" crossorigin="anonymous"></script>
+        <script type="module" src="js/main.js"></script>
     </div>
-    <script src="https://kit.fontawesome.com/89fb6a41df.js" crossorigin="anonymous"></script>
-    <script type="module" src="js/main.js"></script>
 </body>
 
 </html>
