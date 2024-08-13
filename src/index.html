@@ -16,7 +16,7 @@
     <div class="grid-container">
         <header>
 
-            <!-- PNG optimeras till WebP -->
+            <!-- Klickbar logotyp - PNG optimeras till WebP -->
             <a href="index.html">
                 <picture>
                     <source srcset="./images/logo.png?as=webp&width=295" type="image/png">
@@ -57,7 +57,7 @@
 
         <!-- JPG optimeras till WebP -->
         <main>
-            <div class="hero-container">
+            <div class="hero-container" id="image-animation">
                 <picture>
                     <source srcset="./images/hero.jpg?as=webp&width=1512" type="image/webp">
                     <img src="./images/hero.jpg?width=1512" alt="Cafébord med två stolar och en krukväxt">
@@ -66,7 +66,11 @@
 
             <div class="text-container">
                 <h1>Gataki</h1>
-                <p>Text om Gataki...</p>
+                <p>Gataki betyder "liten katt" eller "kattunge" på grekiska. Förutom att servera våra gäster
+                    i Stockholm medelhavsgodsaker stödjer vi lokala eldsjälar i Chaniaområdet på nordvästra Kreta
+                    som arbetar med att hjälpa hemlösa katter. Tio procent av våra intäkter går direkt till dessa volontärer.
+                    Läs mer om vår resa och deras arbete <a href="#about"><strong>här</strong></a>
+                </p>
             </div>
 
             <!-- JPG optimeras till WebP -->
@@ -96,7 +100,19 @@
                 <div id="about" class="heading">
                     <h1>Om oss</h1>
                 </div>
-                <p>Text om oss...</p>
+                <p>Gatakis resa började redan under tidigt 90-tal då vi, Sara och Lisa, möttes när vi säsongsarbetade
+                    på en restaurant i Chania, Kreta.
+                    Vi märkte att många katter for illa och tog kontakt med några lokala volontärer.
+                    Under åren som gått har vi gjort många resor till Kreta med våra respektive familjer
+                    som också blivit engagerade i frågan. Vi har även hållit kontakt med några av volontärerna.
+                    När vi 2023 tog det stora steget att gemensamt öppna ett café i centrala Stockholm var valet
+                    av tema inte svårt.
+                    Medelhavstemat var självklart och likaså att en del av vinsten skulle gå till de eldsjälar
+                    som arbetat så länge med att hjälpa hemlösa katter (och hundar) i Chania.
+                    Tio procent av caféets försäljning går därför direkt till de volontärer som vi följt under så många år.
+                    Vi är även glada att ha Sebastian med oss i teamet som bidrar stort med sin kulinariska inspiration
+                    och expertis.
+                </p>
             </div>
 
             <!-- JPG optimeras till WebP -->
@@ -111,7 +127,30 @@
                 <div id="contact" class="heading">
                     <h1>Kontakt</h1>
                 </div>
-                <p>Kontaktformulär...</p>
+                <p>För att komma i kontakt med oss vänligen fyll i formuläret nedan.
+                    Vi försöker att återkoppla inom 24 timmar.
+                    Om ärendet är brådskande går det även att nå oss på telefon: 0733-12 34 56.
+                    Under lunchtid mellan 11-14 kan det vara svårt för oss att svara. 
+                    Ring därför gärna på vardagar mellan 14-17.
+                    Se våra öppettider nedan.
+                </p>
+            </div>
+
+            <!-- Formulär för meddelanden till personal + Animerad knapp -->
+            <div class="form-container">
+                <form method="post" id="messagesForm">
+
+                    <label for="name">Namn</label><br>
+                    <input type="text" id="name" name="name" placeholder="Namn" required><br>
+
+                    <label for="email">Epost</label><br>
+                    <input type="text" id="email" name="email" placeholder="Epost" required><br>
+
+                    <label for="message">Meddelande</label><br>
+                    <textarea id="message" name="message" placeholder="Skriv ett meddelande här..." required></textarea><br>
+
+                    <input type="submit" value="Skicka" class="button">
+                </form>
             </div>
 
             <h2>Hitta hit</h2>
