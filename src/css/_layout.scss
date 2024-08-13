@@ -345,24 +345,15 @@ footer p {
 }
 
 #map {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
     height: 400px;
+    width: 100%;
 }
 
 img {
     height: auto;
     margin: 0 auto 0 auto;
-    width: 100%;
-}
-
-#weather {
-    display: flex;
-    justify-content: space-around;
-    flex-flow: row wrap;
-    text-align: center;
-}
-
-#map {
-    height: 450px;
     width: 100%;
 }
 

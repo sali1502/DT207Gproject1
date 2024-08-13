@@ -10,13 +10,19 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
 </head>
 
 <body>
     <div class="grid-container">
         <header>
 
-            <!-- Klickbar logotyp - PNG optimeras till WebP -->
+            <!-- Klickbar logotyp + PNG optimeras till WebP -->
             <a href="index.html">
                 <picture>
                     <source srcset="./images/logo.png?as=webp&width=295" type="image/png">
@@ -55,7 +61,7 @@
         <!-- Animerad linje -->
         <div class="colorChangeBar"></div>
 
-        <!-- JPG optimeras till WebP -->
+        <!-- Animerad bild + JPG optimeras till WebP -->
         <main>
             <div class="hero-container" id="image-animation">
                 <picture>
@@ -136,7 +142,7 @@
                 </p>
             </div>
 
-            <!-- Formulär för meddelanden till personal + Animerad knapp -->
+            <!-- Formulär för meddelanden till personal + animerad knapp -->
             <div class="form-container">
                 <form method="post" id="messagesForm">
 
@@ -167,6 +173,11 @@
 
     <div class="space"></div>
 
+   <!-- Karta med markör -->
+    <div class="image-container">
+    <div id="map"></div>
+    </div>
+  
     <footer>
         <div class="footer-container">
             <p><i class="fa-regular fa-envelope"></i>&nbsp;<a href=mailto:sali1502@student.miun.se>Kontakta oss

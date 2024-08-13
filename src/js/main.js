@@ -22,3 +22,14 @@ function toggleMenu() {
         navMenuEl.style.display = "none";
     }
 }
+
+/* Karta */
+
+var map = L.map('map').setView([59.343, 18.095], 15);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+var marker = L.marker([59.343, 18.095]).addTo(map);
