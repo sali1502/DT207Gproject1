@@ -199,7 +199,7 @@ ul {
     display: block;
     justify-content: center;
     margin: 0 auto 0 auto;
-    width: 100%;
+    width: 80%;
 }
 
 .hero-container-small {
@@ -210,7 +210,7 @@ ul {
     display: block;
     justify-content: center;
     margin: 0 auto 0 auto;
-    width: 70%;
+    width: 50%;
 }
 
 .food-container-small {
@@ -221,7 +221,7 @@ ul {
     display: block;
     justify-content: center;
     margin: 0 auto 0 auto;
-    width: 70%;
+    width: 40%;
 }
 
 .cutlery-container {
@@ -236,7 +236,7 @@ ul {
     display: block;
     justify-content: center;
     margin: 0 auto 0 auto;
-    width: 70%;
+    width: 50%;
 }
 
 .cafe-container-small {
@@ -247,7 +247,7 @@ ul {
     display: block;
     justify-content: center;
     margin: 0 auto 0 auto;
-    width: 70%;
+    width: 50%;
     padding-top: 2vh;
     padding-bottom: 2vh;
 }
@@ -260,9 +260,7 @@ ul {
     font-size: 1em;
     line-height: 1.8em;
     color: base.$primary-text;
-    width: 70%;
-    padding-left: 2vw;
-    padding-right: 2vw;
+    width: 50%;
     padding-bottom: 5vh;
     padding-top: 5vh;
 }
@@ -275,9 +273,7 @@ ul {
     font-size: 1em;
     line-height: 1.8em;
     color: base.$primary-text;
-    padding-left: 2vw;
-    padding-right: 2vw;
-    width: 50%;
+    width: 40%;
     padding-bottom: 10vh;
 }
 
@@ -314,29 +310,56 @@ img {
 
 #map {
     height: 450px;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
     display: block;
     width: 100%;
 }
 
-.footer-container {
-    @extend .text-container;
-}
-
 footer {
+    display: flex;
+    justify-content: center;
     font-size: 0.9em;
     line-height: 2em;
     height: auto;
     background-color: base.$primary-blue;
-    position: relative;
-    padding-right: 5vw;
-    padding-left: 5vw;
     padding-top: 2vh;
     padding-bottom: 2vh;
     width: 100%;
-    height: 100px;
-    text-align: center;
+    height: auto;
+    font-weight: 400;
+    max-width: 1512px;
+}
+
+.footer-container-left {
+    font-size: 0.9em;
+    line-height: 2em;
+    height: auto;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    text-align: left;
+    font-weight: 400;
+    max-width: 1512px;
+}
+
+.footer-container-right {
+    font-size: 0.9em;
+    line-height: 2em;
+    height: auto;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    text-align: right;
+    font-weight: 400;
+    max-width: 1512px;
+}
+
+.footer-container-center {
+    font-size: 0.9em;
+    line-height: 2em;
+    height: auto;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    text-align: left;
     font-weight: 400;
     max-width: 1512px;
 }
@@ -347,11 +370,24 @@ footer a {
 
 footer p {
     color: base.$primary-text-header-footer;
-    text-align: center;
+    text-align: left;
 }
 
-.space {
+.space1 {
+    height: 2vh;
+}
+
+.space2 {
     height: 1vh;
+}
+
+.space3 {
+    height: 4vh;
+}
+
+p {
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
 
 /* Animeringar */
@@ -474,7 +510,6 @@ footer p {
 
 }
 
-
 /* Visar läge för mediumstor skärm */
 @media only screen and (max-width: 1024px) {
 
@@ -493,7 +528,7 @@ footer p {
         display: block;
         justify-content: center;
         margin: 0 auto 0 auto;
-        width: 70%;
+        width: 80%;
     }
     
     .food-container-small {
@@ -504,7 +539,7 @@ footer p {
         display: block;
         justify-content: center;
         margin: 0 auto 0 auto;
-        width: 70%;
+        width: 60%;
     }
 
     .cutlery-container {
@@ -519,7 +554,7 @@ footer p {
         display: block;
         justify-content: center;
         margin: 0 auto 0 auto;
-        width: 70%;
+        width: 80%;
     }
     
     .cafe-container-small {
@@ -535,7 +570,7 @@ footer p {
         display: block;
         justify-content: center;
         margin: 0 auto 0 auto;
-        width: 70%;
+        width: 80%;
     }
 
     .text-container {
@@ -547,8 +582,6 @@ footer p {
         line-height: 1.8em;
         color: base.$primary-text;
         width: 70%;
-        padding-left: 2vw;
-        padding-right: 2vw;
     }
 
     .form-container {
@@ -558,10 +591,8 @@ footer p {
         text-align: center;
         font-size: 1em;
         line-height: 1.8em;
-        padding-left: 2vw;
-        padding-right: 2vw;
         color: base.$primary-text;
-        width: 70%;
+        width: 60%;
     }
     
     form {
@@ -584,8 +615,70 @@ footer p {
         margin-top: 0.5vh;
         margin-bottom: 0.5vh;
     }
+
+    p {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    footer {
+        display: block;
+        font-size: 0.9em;
+        line-height: 2em;
+        background-color: base.$primary-blue;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        width: 100%;
+        height: auto;
+        text-align: left;
+        font-weight: 400;
+        max-width: 1512px;
+    }
     
+    .footer-container-left {
+        font-size: 0.9em;
+        line-height: 2em;
+        height: auto;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        text-align: left;
+        font-weight: 400;
+        max-width: 1512px;
+    }
+    
+    .footer-container-right {
+        font-size: 0.9em;
+        line-height: 2em;
+        height: auto;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        text-align: left;
+        font-weight: 400;
+        max-width: 1512px;
+    }
+    
+    .footer-container-center {
+        font-size: 0.9em;
+        line-height: 2em;
+        height: auto;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        text-align: left;
+        font-weight: 400;
+        max-width: 1512px;
+    }
+    
+    footer a {
+        color: base.$primary-text-header-footer;
+    }
+    
+    footer p {
+        color: base.$primary-text-header-footer;
+        text-align: left;
+    }
+
 }
+    
 
 /* Visar en kolumn för litet läge, mobiltelefon */
 
@@ -610,14 +703,14 @@ footer p {
         display: block;
         justify-content: center;
         margin: 0 auto 0 auto;
-        width: 70%;
+        width: 80%;
     }
 
     .cat-container-large {
         display: block;
         justify-content: center;
         margin: 0 auto 0 auto;
-        width: 70%;
+        width: 80%;
     }
 
     .cutlery-container {
@@ -636,7 +729,7 @@ footer p {
         display: block;
         justify-content: center;
         margin: 0 auto 0 auto;
-        width: 70%;
+        width: 80%;
     }
 
     #map {
@@ -648,7 +741,7 @@ footer p {
         display: block;
         justify-content: center;
         margin: 0 auto 0 auto;
-        width: 70%;
+        width: 80%;
     }
 
     .text-container {
@@ -659,9 +752,7 @@ footer p {
         font-size: 1em;
         line-height: 1.8em;
         color: base.$primary-text;
-        width: 100%;
-        padding-left: 5vw;
-        padding-right: 5vw;
+        width: 80%;
     }
 
     .form-container {
@@ -672,9 +763,7 @@ footer p {
         font-size: 1em;
         line-height: 1.8em;
         color: base.$primary-text;
-        padding-right: 5vw;
-        padding-left: 5vw;
-        width: 100%;
+        width: 80%;
     }
     
     form {
@@ -702,6 +791,7 @@ footer p {
         margin-left: 5vw;
         margin-right: 5vw;
     }
+    
 }
 
 
