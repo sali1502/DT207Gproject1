@@ -1,8 +1,8 @@
-/* Litet fönster som öppnas med formulär för att uppdatera i menyn */
+/* Mindre fönster som öppnas med ett formulär för att uppdatera poster i menyn */
 
 document.addEventListener('DOMContentLoaded', function () {
     console.log("JavaScript är laddad");
-    
+
     const modal = document.getElementById('menuModal');
     const closeButton = document.querySelector('.close-button');
 

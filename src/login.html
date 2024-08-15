@@ -15,7 +15,13 @@
 <body>
     <div class="grid-container">
         <header>
-
+            <!-- Klickbar logotyp PNG optimeras till WebP -->
+            <a href="index.html">
+                <picture>
+                    <source srcset="./images/logo.png?as=webp&width=295" type="image/png">
+                    <img src="./images/logo.png?width=295" alt="Logotyp" class="logo">
+                </picture>
+            </a>
             <!-- Responsiv meny -->
             <div class="navigation"></div>
             <button class="menu-btn open" id="open-menu">
@@ -46,6 +52,7 @@
 
         <div class="space2"></div>
 
+        <!-- Formulär för att logga in till adminsidan -->
         <main>
             <h1>Logga in</h1>
             <div class="form-container">
@@ -63,61 +70,60 @@
 
         <div class="space4"></div>
 
-            <div class="hidden-container">
-                <p><a href="admin.html">Logga in</a></p>
+        <div class="hidden-container">
+            <p><a href="admin.html">Logga in</a></p>
+        </div>
+
+        <!-- Footer med ikoner -->
+        <footer>
+            <div class="footer-container-left">
+                <p>Kontakt</p>
+
+                <div class="space1"></div>
+
+                <p><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;&nbsp;Tessingränd 1<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;123 45 Stockholm</p>
+
+                <div class="space2"></div>
+
+                <p><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;0733-12 34 56</p>
+
+                <div class="space2"></div>
+
+                <p><i class="fa-regular fa-envelope"></i>&nbsp;&nbsp;&nbsp;<a
+                        href=mailto:sali1502@student.miun.se>E-post</a></p>
+
+                <div class="space2"></div>
+
+                <p><i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;&nbsp;Facebook</p>
+
+                <div class="space2"></div>
+
+                <p><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;&nbsp;Instagram</p>
+
             </div>
-     
 
-   <!-- Footer med ikoner -->
-   <footer>
-    <div class="footer-container-left">
-        <p>Kontakt</p>
+            <div class="space1"></div>
 
-        <div class="space1"></div>
+            <div class="footer-container-center">
+                <p>Öppettider</p>
 
-        <p><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;&nbsp;Tessingränd 1<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;123 45 Stockholm</p>
+                <div class="space1"></div>
 
-        <div class="space2"></div>
+                <p><i class="fa-solid fa-calendar-days"></i>&nbsp;&nbsp;&nbsp;Må-Fre&nbsp;&nbsp;&nbsp;06:30-17:30</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lör&nbsp;&nbsp;&nbsp;09:00-15:00</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sön&nbsp;&nbsp;&nbsp;Stängt</p>
+            </div>
 
-        <p><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;0733-12 34 56</p>
+            <div class="space1"></div>
 
-        <div class="space2"></div>
+            <div class="footer-container-right">
+                <p><i class="fa-solid fa-lock">&nbsp;&nbsp;&nbsp;</i><a href="login.html">Admin</a></p>
+            </div>
 
-        <p><i class="fa-regular fa-envelope"></i>&nbsp;&nbsp;&nbsp;<a
-                href=mailto:sali1502@student.miun.se>E-post</a></p>
+            <div class="space1"></div>
 
-        <div class="space2"></div>
-
-        <p><i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;&nbsp;Facebook</p>
-
-        <div class="space2"></div>
-
-        <p><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;&nbsp;Instagram</p>
-
-    </div>
-
-    <div class="space1"></div>
-
-    <div class="footer-container-center">
-        <p>Öppettider</p>
-
-        <div class="space1"></div>
-
-        <p><i class="fa-solid fa-calendar-days"></i>&nbsp;&nbsp;&nbsp;Må-Fre&nbsp;&nbsp;&nbsp;06:30-17:30</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lör&nbsp;&nbsp;&nbsp;09:00-15:00</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sön&nbsp;&nbsp;&nbsp;Stängt</p>
-    </div>
-
-    <div class="space1"></div>
-
-    <div class="footer-container-right">
-        <p><i class="fa-solid fa-lock">&nbsp;&nbsp;&nbsp;</i><a href="login.html">Admin</a></p>
-    </div>
-
-    <div class="space1"></div>
-
-</footer>
+        </footer>
         <script src="https://kit.fontawesome.com/89fb6a41df.js" crossorigin="anonymous"></script>
         <script type="module" src="js/main.js"></script>
 

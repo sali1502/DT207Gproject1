@@ -25,6 +25,7 @@ function toggleMenu() {
 
 /* Karta */
 
+/* Leaflet karta med markör */
 var map = L.map('map').setView([59.343, 18.095], 15);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
