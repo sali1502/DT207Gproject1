@@ -14,16 +14,14 @@
 
 <body>
     <div class="grid-container">
+
         <header>
-            <!-- PNG optimeras till WebP -->
             <a href="index.html">
                 <picture>
                     <source srcset="./images/logo.png?as=webp&width=295" type="image/png">
                     <img src="./images/logo.png?width=295" alt="Logotyp" class="logo">
                 </picture>
             </a>
-
-            <!-- Responsiv meny -->
             <div class="navigation"></div>
             <button class="menu-btn open" id="open-menu">
                 <span class="menu-icon">
@@ -33,7 +31,6 @@
                 </span>
                 <span class="menu-text">Meny</span>
             </button>
-
             <nav id="nav-menu">
                 <button class="menu-btn close" id="close-menu">
                     <span class="menu-icon">
@@ -43,33 +40,80 @@
                     <span class="menu-text">Stäng</span>
                 </button>
                 <ul>
-                    <li><a href="index.html"><strong>Logga ut</strong></a></li>
+                    <li><a href="index.html"><strong>Logga ut&nbsp;<i
+                                    class="fa-solid fa-right-from-bracket"></i></strong></a></li>
                 </ul>
             </nav>
         </header>
 
-        <!-- Animerad linje -->
         <div class="colorChangeBar"></div>
 
         <main>
-            <div class="hero-container">
-                <!-- JPG optimeras till WebP -->
+            <div class="hero-container-large-adm">
                 <picture>
                     <source srcset="./images/admin.jpg?as=webp&width=1512" type="image/webp">
                     <img src="./images/admin.jpg?width=1512" alt="Citroner och körsbär på en skärbräda">
                 </picture>
             </div>
 
-            <h1>Admin</h1>
+            <div class="hero-container-small-adm">
+                <picture>
+                    <source srcset="./images/admin_small.jpg?as=webp&width=600" type="image/webp">
+                    <img src="./images/admin_small.jpg?width=600" alt="Välkomsttext till personal på blå bakgrund">
+                </picture>
+            </div>
 
-            <div class="text-container">
-                <p><a href="update.html"><strong>Uppdatera</strong></a></p>
-                <p><a href="register.html"><strong>Registrera</strong></a></p>
+            <div class="space4"></div>
+
+            <h1>Lägg till i menyn</h1>
+
+            <h2><a href="#" class="menu-link" data-category="starter">Smårätter</a></h2>
+            <h2><a href="#" class="menu-link" data-category="sallad">Sallad</a></h2>
+            <h2><a href="#" class="menu-link" data-category="warm">Varm mat</a></h2>
+            <h2><a href="#" class="menu-link" data-category="dessert">Dessert</a></h2>
+            <h2><a href="#" class="menu-link" data-category="drink">Dryck</a></h2>
+
+            <div class="space4"></div>
+
+            <h1>Ändra & radera i menyn</h1>
+
+            <div class="text-container"> Innehåll som läses ut dynamiskt med ändra- och radera knappar...</div>
+
+            <div class="space4"></div>
+
+            <h1>Meddelanden</h1>
+
+            <div class="text-container"> Innehåll som läses ut dynamiskt från besöksidan...</div>
+
+            <div class="space4"></div>
+
+            <h1>Registrera användare</h1>
+
+            <h2><a href="register.html">Till registrering</a></h2>
+
+            <div class="space4"></div>
+
+            <!-- Litet fönster som öppnas med formulär för att lägga till i menyn -->
+            <div id="menuModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+
+                    <h2>Lägg till nytt menyalternativ</h2>
+
+                    <form method="post" id="addMenuForm">
+                        <label for="menuname">Namn</label><br>
+                        <input type="text" id="menuname" name="menuname"><br>
+                        <label for="menudescription">Beskrivning</label><br>
+                        <input type="text" id="menudescription" name="menudescription"><br>
+                        <label for="menuprice">Pris</label><br>
+                        <input type="text" id="menuprice" name="menuprice"><br>
+                        <input type="submit" value="Lägg till" class="button">
+                    </form>
+                </div>
             </div>
         </main>
 
-        <div class="space"></div>
-
+        <!-- Footer med ikoner -->
         <footer>
             <div class="footer-container-left">
                 <p>Kontakt</p>
@@ -98,7 +142,7 @@
 
             </div>
 
-            <div class="space3"></div>
+            <div class="space1"></div>
 
             <div class="footer-container-center">
                 <p>Öppettider</p>
@@ -110,18 +154,19 @@
                 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sön&nbsp;&nbsp;&nbsp;Stängt</p>
             </div>
 
-            <div class="space3"></div>
+            <div class="space1"></div>
 
             <div class="footer-container-right">
-                <p><i class="fa-solid fa-lock">&nbsp;&nbsp;&nbsp;</i><a href="login.html">Logga in</a></p>
+                <p><i class="fa-solid fa-lock-open"></i>&nbsp;&nbsp;&nbsp;</i><a href="login.html">Admin</a></p>
             </div>
 
-            <div class="space3"></div>
+            <div class="space1"></div>
 
         </footer>
 
         <script src="https://kit.fontawesome.com/89fb6a41df.js" crossorigin="anonymous"></script>
         <script type="module" src="js/main.js"></script>
+        <script type="module" src="js/nodal.js"></script>
 
     </div>
 </body>
