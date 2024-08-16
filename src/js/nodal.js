@@ -1,3 +1,5 @@
+/* Projekt, DT207G Backend-baserad webbutveckling, Åsa Lindskog sali1502@student.miun.se */
+
 /* Mindre fönster som öppnas med ett formulär för att uppdatera poster i menyn */
 
 document.addEventListener('DOMContentLoaded', function () {

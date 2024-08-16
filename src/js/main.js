@@ -1,3 +1,5 @@
+/* Projekt, DT207G Backend-baserad webbutveckling, Åsa Lindskog sali1502@student.miun.se */
+
 /* Meny */
 
 // Hämta meny-knappar
@@ -26,7 +28,7 @@ function toggleMenu() {
 /* Karta */
 
 /* Leaflet karta med markör */
-var map = L.map('map').setView([59.343, 18.095], 15);
+var map = L.map('map').setView([59.343, 18.095], 13);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,

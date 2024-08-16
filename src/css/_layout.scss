@@ -410,8 +410,28 @@ p {
     margin-right: 5vw;
 }
 
-.hidden-container {
-    display: block;
+.message-container {
+        display: block;
+        justify-content: center;
+        margin: 0 auto 0 auto;
+        text-align: center;
+        font-size: 0.8em;
+        color: base.$primary-text;
+        width: 100%;
+        height: auto;
+        padding-top: 2vw;
+        padding-bottom: 3vw;
+}
+
+.fa-solid {
+    color: white;
+}
+
+.logoutBtn {
+    font-size: 1em;
+    color: base.$primary-text-header-footer;
+    background-color: base.$primary-blue;
+    border: none;
 }
 
 /* Fönster som öppnas med formulär att lägga till i menyn */
@@ -450,6 +470,7 @@ p {
     text-decoration: none;
     cursor: pointer;
 }
+
 
 /* Animeringar */
 
