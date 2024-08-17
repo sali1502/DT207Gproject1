@@ -423,6 +423,32 @@ p {
         padding-bottom: 3vw;
 }
 
+.list-container ul {
+    width: 70%;
+    list-style-type: none;
+    font-style: italic;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.list-container h2 {
+    padding-top: 3vh;
+    padding-bottom: 1vh;
+}
+
+.name {
+    font-weight: bold;
+    padding-top: 1vh;
+}
+
+.price {
+    font-weight: bold;
+    color: rgb(161, 65, 65);
+    padding-bottom: 2vh;
+}
+
+
 .fa-solid {
     color: white;
 }
