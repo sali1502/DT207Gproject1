@@ -144,7 +144,7 @@ nav li:hover {
 
 /* Justera för fixerad header */
 main {
-    margin-top: 100px; 
+    margin-top: 100px;
 }
 
 :target::before {
@@ -398,29 +398,40 @@ footer p {
 }
 
 .space3 {
- height: 10vh;
+    height: 10vh;
 }
 
 .space4 {
     height: 5vh;
-   }
+}
 
 p {
     margin-left: 5vw;
     margin-right: 5vw;
 }
 
+#message-container {
+    display: block;
+    justify-content: center;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    font-size: 0.8em;
+    color: base.$primary-text;
+    width: 100%;
+    height: auto;
+    padding-bottom: 1vh;
+}
+
 .message-container {
-        display: block;
-        justify-content: center;
-        margin: 0 auto 0 auto;
-        text-align: center;
-        font-size: 0.8em;
-        color: base.$primary-text;
-        width: 100%;
-        height: auto;
-        padding-top: 2vw;
-        padding-bottom: 3vw;
+    display: block;
+    justify-content: center;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    font-size: 0.8em;
+    color: base.$primary-text;
+    width: 100%;
+    height: auto;
+    padding-bottom: 1vh;
 }
 
 .list-container ul {
@@ -437,6 +448,20 @@ p {
     padding-bottom: 1vh;
 }
 
+.list-container-adm ul {
+    width: 70%;
+    list-style-type: none;
+    font-style: italic;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.list-container-adm h2 {
+    padding-top: 1vh;
+    padding-bottom: 0vh;
+}
+
 .name {
     font-weight: bold;
     padding-top: 1vh;
@@ -447,7 +472,6 @@ p {
     color: rgb(161, 65, 65);
     padding-bottom: 2vh;
 }
-
 
 .fa-solid {
     color: white;
@@ -460,22 +484,26 @@ p {
     border: none;
 }
 
+.menu-link {
+    color: base.$primary-text;
+}
+
 /* Fönster som öppnas med formulär att lägga till i menyn */
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
+    width: 100%;
+    height: 100%;
+    overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; 
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
@@ -496,7 +524,6 @@ p {
     text-decoration: none;
     cursor: pointer;
 }
-
 
 /* Animeringar */
 
@@ -523,7 +550,40 @@ p {
     font-size: 0.8em;
 }
 
+.deleteBtn {
+    background-color: base.$primary-blue;
+    color: white;
+    margin-bottom: 2vh;
+    border-radius: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 0.8em;
+}
+
+.updateBtn {
+    background-color: base.$primary-blue;
+    color: white;
+    margin-bottom: 2vh;
+    margin-right: 2vh;
+    border-radius: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 0.8em;
+}
+
 .button:hover {
+    animation: btnHover 2s 0s infinite both ease-out;
+}
+
+.deleteBtn:hover {
+    animation: btnHover 2s 0s infinite both ease-out;
+}
+
+.updateBtn:hover {
     animation: btnHover 2s 0s infinite both ease-out;
 }
 
@@ -582,7 +642,7 @@ p {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%; 
+            width: 100%;
             z-index: 1000;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
@@ -590,33 +650,33 @@ p {
         .menu-btn {
             display: none;
         }
-    
+
         #open-menu {
             display: none !important;
         }
-    
+
         nav {
             display: block !important;
             position: static;
-            box-shadow: none; 
+            box-shadow: none;
             height: auto;
             font-size: 1em;
             width: auto;
         }
-    
+
         nav ul {
             height: 100%;
         }
-    
+
         nav li {
             display: inline;
             padding: 1.2em 0;
         }
-    
+
         main {
             margin-top: 100px;
         }
-    
+
         footer {
             margin-top: 50px;
         }
@@ -643,7 +703,7 @@ p {
         margin: 0 auto 0 auto;
         width: 100%;
     }
-    
+
     .hero-container-small-adm {
         display: none;
     }
@@ -654,7 +714,7 @@ p {
         margin: 0 auto 0 auto;
         width: 80%;
     }
-    
+
     .food-container-small {
         display: none;
     }
@@ -680,7 +740,7 @@ p {
         margin: 0 auto 0 auto;
         width: 80%;
     }
-    
+
     .cafe-container-small {
         display: none;
     }
@@ -689,7 +749,7 @@ p {
         height: 300px;
         width: 100%;
     }
-    
+
     .map-container {
         display: block;
         justify-content: center;
@@ -718,11 +778,11 @@ p {
         color: base.$primary-text;
         width: 50%;
     }
-    
+
     form {
         text-align: left;
     }
-    
+
     input[type=text] {
         width: 100%;
         padding: 5px;
@@ -730,7 +790,7 @@ p {
         margin-top: 0.5vh;
         margin-bottom: 1vh;
     }
-    
+
     textarea {
         width: 100%;
         height: 10vh;
@@ -758,7 +818,7 @@ p {
         font-weight: 400;
         max-width: 1512px;
     }
-    
+
     .footer-container-left {
         font-size: 0.9em;
         line-height: 2em;
@@ -769,7 +829,7 @@ p {
         font-weight: 400;
         max-width: 1512px;
     }
-    
+
     .footer-container-right {
         font-size: 0.9em;
         line-height: 2em;
@@ -780,7 +840,7 @@ p {
         font-weight: 400;
         max-width: 1512px;
     }
-    
+
     .footer-container-center {
         font-size: 0.9em;
         line-height: 2em;
@@ -791,17 +851,17 @@ p {
         font-weight: 400;
         max-width: 1512px;
     }
-    
+
     footer a {
         color: base.$primary-text-header-footer;
     }
-    
+
     footer p {
         color: base.$primary-text-header-footer;
         text-align: left;
     }
 }
-    
+
 /* Design för mobiltelefon */
 
 @media only screen and (max-width: 600px) {
@@ -815,12 +875,12 @@ p {
         justify-content: center;
         margin: 0 auto 0 auto;
         width: 80%;
-    }  
+    }
 
     .hero-container-large-adm {
         display: none;
     }
-    
+
     .hero-container-small-adm {
         display: block;
         justify-content: center;
@@ -857,7 +917,7 @@ p {
     .cafe-container-large {
         display: none;
     }
-    
+
     .cafe-container-small {
         display: block;
         justify-content: center;
@@ -869,7 +929,7 @@ p {
         height: 300px;
         width: 100%;
     }
-    
+
     .map-container {
         display: block;
         justify-content: center;
@@ -898,11 +958,11 @@ p {
         color: base.$primary-text;
         width: 70%;
     }
-    
+
     form {
         text-align: left;
     }
-    
+
     input[type=text] {
         width: 100%;
         padding: 5px;
@@ -910,7 +970,7 @@ p {
         margin-top: 0.5vh;
         margin-bottom: 1vh;
     }
-    
+
     textarea {
         width: 100%;
         height: 10vh;
@@ -919,12 +979,10 @@ p {
         margin-top: 0.5vh;
         margin-bottom: 0.5vh;
     }
-    
+
     p {
         margin-left: 5vw;
         margin-right: 5vw;
     }
-    
+
 }
-
-
