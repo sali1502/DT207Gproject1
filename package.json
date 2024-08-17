@@ -10,7 +10,7 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "I frontenddelen av projektuppgiften för DT207G har en webbapplikation för ett café skapats.<br>\r Applikationen består av två delar, ett gränssnitt för besökare och ett gränssnitt för personal.<br>\r På den publika webbplatsen läses en meny ut dynamiskt från det REST API som har skapats i backenddelen av uppgiften (DT207Gproject).\r Det finns även ett formulär där gäster kan skicka meddelanden till personalen.<br>\r Via en loginfunktion med hashat lösenord och tokens får personalen tillgång till en skyddad adminsida.<br>\r På adminsidan kan personalen skapa nya poster, uppdatera poster och radera poster i menyn.<br> \r Vidare kan personalen läsa och radera meddelanden från gäster och skapa nya användarnam och lösenord till loginfunktionen.<br>\r Applikationen är skapad i en automatiserad utvecklingsmiljö med Parcel och SASS/SCSS.",
   "devDependencies": {
     "@parcel/packager-raw-url": "^2.12.0",
     "@parcel/transformer-sass": "^2.12.0",
