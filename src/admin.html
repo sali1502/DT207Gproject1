@@ -70,7 +70,7 @@
 
             <div class="space3"></div>
 
-            <!-- Länkar som leder till ett formulär för att lägga till poster i meny - öppnas i litet fönster-->
+            <!-- Länkar som leder till ett formulär för att lägga till poster i menyn - öppnas i ett litet fönster -->
             <h1>Lägg till i menyn</h1>
 
             <h2><a href="#" class="menu-link" data-category="starters">Smårätter</a></h2>
@@ -112,6 +112,7 @@
 
     <div class="space3"></div>
 
+
     <!-- Formulär för att uppdatera meny -->
 
     <h1>Uppdatera meny</h1>
@@ -122,16 +123,16 @@
 
         <form id="updateMenuForm">
 
-        <label for="name">Namn</label><br>
-        <input type="text" id="name" name="name" required><br>
+            <label for="name">Namn</label><br>
+            <input type="text" id="name" name="name" required><br>
 
-        <label for="description">Beskrivning</label><br>
-        <input type="text" id="description" name="description" required><br>
+            <label for="description">Beskrivning</label><br>
+            <input type="text" id="description" name="description" required><br>
 
-        <label for="price">Pris</label><br>
-        <input type="text" id="price" name="price" required><br>
+            <label for="price">Pris</label><br>
+            <input type="text" id="price" name="price" required><br>
 
-        <input type="submit" value="Uppdatera" class="button">
+            <input type="submit" value="Uppdatera" class="button">
         </form>
     </div>
 
@@ -149,15 +150,15 @@
 
     <div class="space4"></div>
 
-    <!-- Litet fönster som öppnas med formulär för att lägga till poster i menyn -->
 
-    <div id="menuModal" class="modal">
+    <!-- Litet fönster som öppnas med ett formulär för att lägga till poster i menyn -->
+
+    <!-- Formulär för smårätter -->
+    <div id="menuStarters" class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
-
             <h2>Lägg till nytt menyalternativ</h2>
-
-            <form method="post" id="addMenuForm">
+            <form method="post" id="addMenuStarters">
                 <label for="name">Namn</label><br>
                 <input type="text" id="name" name="name"><br>
                 <label for="description">Beskrivning</label><br>
@@ -168,6 +169,75 @@
             </form>
         </div>
     </div>
+
+    <!-- Formulär för sallad -->
+    <div id="menuSallads" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Lägg till nytt menyalternativ</h2>
+            <form method="post" id="addMenuSallads">
+                <label for="name">Namn</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="description">Beskrivning</label><br>
+                <input type="text" id="description" name="description"><br>
+                <label for="price">Pris</label><br>
+                <input type="text" id="price" name="price"><br>
+                <input type="submit" value="Lägg till" class="button">
+            </form>
+        </div>
+    </div>
+
+    <!-- Formulär för varma rätter -->
+    <div id="menuWarms" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Lägg till nytt menyalternativ</h2>
+            <form method="post" id="addMenuWarms">
+                <label for="name">Namn</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="description">Beskrivning</label><br>
+                <input type="text" id="description" name="description"><br>
+                <label for="price">Pris</label><br>
+                <input type="text" id="price" name="price"><br>
+                <input type="submit" value="Lägg till" class="button">
+            </form>
+        </div>
+    </div>
+
+    <!-- Formulär för dessert -->
+    <div id="menuDesserts" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Lägg till nytt menyalternativ</h2>
+            <form method="post" id="addMenuDesserts">
+                <label for="name">Namn</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="description">Beskrivning</label><br>
+                <input type="text" id="description" name="description"><br>
+                <label for="price">Pris</label><br>
+                <input type="text" id="price" name="price"><br>
+                <input type="submit" value="Lägg till" class="button">
+            </form>
+        </div>
+    </div>
+
+    <!-- Formulär för drycker -->
+    <div id="menuDrinks" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Lägg till nytt menyalternativ</h2>
+            <form method="post" id="addMenuDrinks">
+                <label for="name">Namn</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="description">Beskrivning</label><br>
+                <input type="text" id="description" name="description"><br>
+                <label for="price">Pris</label><br>
+                <input type="text" id="price" name="price"><br>
+                <input type="submit" value="Lägg till" class="button">
+            </form>
+        </div>
+    </div>
+
     </main>
 
     <div class="space3"></div>

@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Skyddad sida med logga ut funktion
+    // Skyddad sida med logga-ut funktion
     const token = localStorage.getItem("token");
 
     if (window.location.pathname.endsWith("admin.html")) {

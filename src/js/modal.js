@@ -1,36 +1,62 @@
 /* Projekt, DT207G Backend-baserad webbutveckling, Åsa Lindskog sali1502@student.miun.se */
 
-// Mindre formulär som öppnas i ett nytt fönster för att lägga till och uppdatera poster i menyn */
+// Hantering av modals - formulär för att lägga till poster i menyn öppnas i ett litet fönster */
+
 document.addEventListener('DOMContentLoaded', function () {
     console.log("JavaScript laddad");
 
-    const modal = document.getElementById('menuModal');
-    const closeButton = document.querySelectorAll('.close-button');
+    // Funktion för att hantera öppning av fönster
+    function openModal(modalId, formId) {
+        const modal = document.getElementById(modalId);
+        const form = document.getElementById(formId);
+        form.setAttribute('data-category', modalId);
+        modal.style.display = 'block';
+    }
 
-    // Öppnar formulär
+    // Funktion för att hantera stängning av fönster
+    function closeModal(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.style.display = 'none';
+    }
+
+    // Hantera öppning av fönster
     document.querySelectorAll('.menu-link').forEach(link => {
         link.addEventListener('click', function (event) {
             event.preventDefault();
             const category = this.getAttribute('data-category');
-            document.querySelector('#addMenuForm').setAttribute('data-category', category);
-            modal.style.display = 'block';
+            if (category === 'starters') {
+                openModal('menuStarters', 'addMenuStarters');
+            } else if (category === 'sallads') {
+                openModal('menuSallads', 'addMenuSallads');
+            } else if (category === 'warms') {
+                openModal('menuWarms', 'addMenuWarms');
+            } else if (category === 'desserts') {
+                openModal('menuDesserts', 'addMenuDesserts');
+            } else if (category === 'drinks') {
+                openModal('menuDrinks', 'addMenuDrinks');
+            }
         });
     });
 
-    // Stänger formulär
-    closeButton.forEach(button => {
+    // Hantera stängning av fönster
+    document.querySelectorAll('.close-button').forEach(button => {
         button.addEventListener('click', function () {
-            modal.style.display = 'none';
-            updateModal.style.display = 'none';
+            closeModal('menuStarters');
+            closeModal('menuSallads');
+            closeModal('menuWarms');
+            closeModal('menuDesserts');
+            closeModal('menuDrinks');
         });
     });
 
-    // Stänger formulär vid klick utanför formuläret
+    // Stäng fönster vid klick utanför
     window.addEventListener('click', function (event) {
-        if (event.target == modal) {
-            modal.style.display = 'none';
-        } else if (event.target == updateModal) {
-            updateModal.style.display = 'none';
+        if (event.target.classList.contains('modal')) {
+            closeModal('menuStarters');
+            closeModal('menuSallads');
+            closeModal('menuWarms');
+            closeModal('menuDesserts');
+            closeModal('menuDrinks');
         }
     });
 });
