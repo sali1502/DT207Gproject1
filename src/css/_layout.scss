@@ -488,6 +488,17 @@ p {
     color: base.$primary-text;
 }
 
+.update-container {
+    display: block;
+    justify-content: center;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    font-size: 1em;
+    line-height: 1.8em;
+    color: base.$primary-text;
+    width: 30%;
+}
+
 /* Fönster som öppnas med formulär att lägga till i menyn */
 .modal {
     display: none;
@@ -566,13 +577,13 @@ p {
     background-color: base.$primary-blue;
     color: white;
     margin-bottom: 2vh;
-    margin-right: 2vh;
     border-radius: 30px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 10px;
     padding-left: 10px;
     font-size: 0.8em;
+    margin-right: 2vh;
 }
 
 .button:hover {

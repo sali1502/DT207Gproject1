@@ -1,11 +1,13 @@
-/* Mindre fönster som öppnas med formulär för att lägga till poster och uppdatera poster i menyn */
+/* Projekt, DT207G Backend-baserad webbutveckling, Åsa Lindskog sali1502@student.miun.se */
+
+// Mindre formulär som öppnas i ett nytt fönster för att lägga till och uppdatera poster i menyn */
 document.addEventListener('DOMContentLoaded', function () {
-    console.log("JavaScript är laddad");
+    console.log("JavaScript laddad");
 
     const modal = document.getElementById('menuModal');
-    const updateModal = document.getElementById('updateModal');
     const closeButton = document.querySelectorAll('.close-button');
 
+    // Öppnar formulär
     document.querySelectorAll('.menu-link').forEach(link => {
         link.addEventListener('click', function (event) {
             event.preventDefault();
@@ -15,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Knapp för att stänga fönster
+    // Stänger formulär
     closeButton.forEach(button => {
         button.addEventListener('click', function () {
             modal.style.display = 'none';
@@ -23,32 +25,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Stänger fönster om man klickar utanför
+    // Stänger formulär vid klick utanför formuläret
     window.addEventListener('click', function (event) {
         if (event.target == modal) {
             modal.style.display = 'none';
         } else if (event.target == updateModal) {
             updateModal.style.display = 'none';
         }
-    });
-
-    // Knapp för att uppdatera poster
-    document.querySelectorAll('.updateBtn').forEach(button => {
-        button.addEventListener('click', async function (event) {
-            event.preventDefault();
-            const id = this.getAttribute('data-id');
-
-            // Hämta smårätter med id
-            let dataset = await getStartersById(id);
-
-            // Skicka med data som ska uppdateras till formuläret
-            document.getElementById("updateMenuForm").dataset.id = id;
-            document.getElementById("name").value = dataset.name;
-            document.getElementById("description").value = dataset.description;
-            document.getElementById("price").value = dataset.price;
-
-            // Visa fönster för att uppdatera poster
-            updateModal.style.display = 'block';
-        });
     });
 });

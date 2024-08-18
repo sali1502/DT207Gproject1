@@ -1,6 +1,6 @@
 /* Projekt, DT207G Backend-baserad webbutveckling, Åsa Lindskog sali1502@student.miun.se */
 
-// Koll om token finns, finns inte token redirect till förstasidan
+// Koll om token finns, finns inte token redirect till index.html
 window.onload = init;
 async function init() {
     const token = localStorage.getItem("token");

@@ -1,61 +1,60 @@
-/* Projekt DT207G VT24, Åsa Lindskog, sali1502@student.miun.se */
+/* Projekt, DT207G Backend-baserad webbutveckling, Åsa Lindskog sali1502@student.miun.se */
 
 "use strict";
 
 /* Funktioner för att läsa ut, uppdatera och radera poster från menyn */
-         
-/* Smårätter */
+
+/* SMÅRÄTTER */
+
 let urlStartersAdm = "http://localhost:3001/api/starters";
 
 document.addEventListener('DOMContentLoaded', (event) => {
 
-    // Kolla om element för att skriva ut data finns
+    // Kolla om element för att skriva ut smårätter finns
     if (document.getElementById("startersListAdm")) {
-        // Om det finns, hämta data
+        // Om det finns, hämta smårätter
         getStartersAdm();
     }
 
-    // Kolla om element för att lägga till data finns
+    // Kolla om element för att lägga till smårätter finns
     if (document.getElementById("addMenuForm")) {
         // Om det finns, lägg till en händelselyssnare på "Lägg till"-knappen
         document.getElementById("addMenuForm").addEventListener("submit", function (event) {
             event.preventDefault();
             let form = event.target;
 
-            // Kalla på funktionen för att lägga till data
-            createStartersAdm (
+            // Kalla på funktionen för att lägga till smårätter
+            createStartersAdm(
                 form.name.value,
                 form.description.value,
                 form.price.value
             );
         });
-    } 
+    }
 
-    // Kolla om element för att uppdatera data finns
+    // Kolla om element för att uppdatera smårätter finns
     if (document.getElementById("updateMenuForm")) {
-        // Om det finns, lägg en händelselyssnare på knappen "Uppdatera"
+        // Om det finns, lägg en händelselyssnare på knappen "Ändra"
         document.getElementById("updateMenuForm").addEventListener("submit", async function (event) {
             event.preventDefault();
             let form = event.target;
             let id = form.dataset.id;
-    
+
             await updateStartersAdm(
                 id,
                 form.name.value,
                 form.description.value,
                 form.price.value
             );
-    
-            updateModal.style.display = 'none';
         });
-    
+
         // När webbläsarfönstret laddas..
         window.onload = async function () {
             // Hämta URL-parametrar med formulärdata
             let params = new URLSearchParams(window.location.search);
             let id = params.get("id");
             if (id) {
-                let dataset = await getStartersById(id);
+                let dataset = await getStartersByIdAdm(id);
                 document.getElementById("updateMenuForm").dataset.id = id;
                 document.getElementById("name").value = dataset.name;
                 document.getElementById("description").value = dataset.description;
@@ -65,7 +64,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 });
 
-// Hämta data och läs ut till skärmen
+// Hämta smårätter och läs ut till skärmen på adminsidan med radera- och ändraknappar
 async function getStartersAdm() {
     try {
         const response = await fetch(urlStartersAdm);
@@ -99,7 +98,9 @@ async function getStartersAdm() {
             let updateButton = document.createElement("button");
             updateButton.className = "updateBtn";
             updateButton.textContent = "Ändra";
-            updateButton.setAttribute('data-id', item._id);
+            updateButton.onclick = () => {
+                window.location.href = `admin.html?id=${item._id}#updateMenuForm`;
+            };
             buttonContainer.appendChild(updateButton);
 
             let deleteButton = document.createElement("button");
@@ -116,10 +117,9 @@ async function getStartersAdm() {
         console.error("Ett fel uppstod vid hämtning av smårätter: ", error);
     }
 }
-
 /* LÄGG TILL DATA - CRUD CREATE/POST */
 
-// Lägg till ny data
+// Lägg till ny smårätt
 async function createStartersAdm(name, description, price) {
 
     let starters = {
@@ -146,20 +146,20 @@ async function createStartersAdm(name, description, price) {
         console.error("Ett fel uppstod när smårätter skulle läggas till: ", error);
     }
 
-    // Omdirigera till startsidan
+    // Omdirigera till adminsidan
     window.location.href = "admin.html";
 }
 
 /* UPPDATERA DATA - CRUD UPDATE/PUT */
 
-// Hämta data med id
-async function getStartersById(id) {
+// Hämta smårätter med id
+async function getStartersByIdAdm(id) {
     try {
         const response = await fetch(`${urlStartersAdm}/${id}`);
         const data = await response.json();
-        return data;
+        return data[0];
     } catch (error) {
-        console.error("Error fetching starter by ID: ", error);
+        console.error("Ett fel uppstod vid hämtning av smårätter: ", error);
     }
 }
 
@@ -180,7 +180,7 @@ async function updateStartersAdm(id, name, description, price) {
         });
 
         if (!response.ok) {
-            throw new Error(`Det gick inte att uppdatera post: ${response.statusText}`);
+            throw new Error(`Det gick inte att uppdatera smårätter: ${response.statusText}`);
         }
 
         const data = await response.json();
@@ -189,15 +189,15 @@ async function updateStartersAdm(id, name, description, price) {
         await getStartersAdm();
 
     } catch (error) {
-        console.error("Error updating starter: ", error);
+        console.error("Ett fel uppstod med uppdatering av smårätter: ", error);
     }
 
-    updateModal.style.display = 'none';
     window.location.href = "admin.html";
 }
 
 /* RADERA DATA - CRUD DELETE/DELETE */
-// Radera data
+
+// Radera smårätter
 async function deleteStartersAdm(id) {
     if (!id) {
         console.error("Ingen id angiven för radering av smårätter");
@@ -216,8 +216,8 @@ async function deleteStartersAdm(id) {
             throw new Error(`Något gick fel: ${response.statusText}`);
         }
 
-        console.log("Smårätter raderad!");
-        displayMessage("Smårätter raderad!");
+        console.log("Smårätter raderad");
+        displayMessage("Smårätter raderad");
 
         await getStartersAdm();
     } catch (error) {
@@ -225,7 +225,7 @@ async function deleteStartersAdm(id) {
     }
 }
 
-// Meddelande för raderade starters
+// Meddelande för raderade smårätter
 function displayMessage(message) {
     let messageContainer = document.getElementById("message-container");
     messageContainer.innerText = message;

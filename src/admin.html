@@ -68,7 +68,7 @@
                 </picture>
             </div>
 
-            <div class="space4"></div>
+            <div class="space3"></div>
 
             <!-- Länkar som leder till ett formulär för att lägga till poster i meny - öppnas i litet fönster-->
             <h1>Lägg till i menyn</h1>
@@ -110,7 +110,32 @@
             </div>
     </div>
 
-    <div class="space4"></div>
+    <div class="space3"></div>
+
+    <!-- Formulär för att uppdatera meny -->
+
+    <h1>Uppdatera meny</h1>
+
+    <div class="update-container">
+
+        <div class="message-container"></div>
+
+        <form id="updateMenuForm">
+
+        <label for="name">Namn</label><br>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="description">Beskrivning</label><br>
+        <input type="text" id="description" name="description" required><br>
+
+        <label for="price">Pris</label><br>
+        <input type="text" id="price" name="price" required><br>
+
+        <input type="submit" value="Uppdatera" class="button">
+        </form>
+    </div>
+
+    <div class="space3"></div>
 
     <h1>Meddelanden</h1>
 
@@ -143,27 +168,6 @@
             </form>
         </div>
     </div>
-
-
-    <!-- Litet fönster som öppnas med formulär för att uppdatera poster i menyn -->
-    <div id="updateModal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-
-            <h2>Ändra menyalternativ</h2>
-
-            <form method="post" id="updateMenuForm">
-                <label for="name">Namn</label><br>
-                <input type="text" id="name" name="name"><br>
-                <label for="description">Beskrivning</label><br>
-                <input type="text" id="description" name="description"><br>
-                <label for="price">Pris</label><br>
-                <input type="text" id="price" name="price"><br>
-                <input type="submit" value="Ändra" class="button">
-            </form>
-        </div>
-    </div>
-
     </main>
 
     <div class="space3"></div>
@@ -221,9 +225,9 @@
 
     <script src="https://kit.fontawesome.com/89fb6a41df.js" crossorigin="anonymous"></script>
     <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/admin.js"></script>
     <script type="module" src="js/menuadm.js"></script>
     <script type="module" src="js/modal.js"></script>
-    <script type="module" src="js/admin.js"></script>
     <script type="module" src="js/token.js"></script>
 
     </div>

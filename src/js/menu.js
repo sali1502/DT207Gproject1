@@ -1,4 +1,5 @@
-/* Projekt DT207G VT24, Åsa Lindskog, sali1502@student.miun.se */
+/* Projekt, DT207G Backend-baserad webbutveckling, Åsa Lindskog sali1502@student.miun.se */
+
 
 "use strict";
 
