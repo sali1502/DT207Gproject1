@@ -44,7 +44,7 @@
                 </button>
                 <ul>
                     <li><button id="logoutBtn" class="logoutBtn"><strong>Logga ut</strong></button>&nbsp;<i
-                            class="fa-solid fa-right-from-bracket"></i></a></li>
+                            class="fa-solid fa-right-from-bracket"></i></li>
                 </ul>
             </nav>
         </header>
@@ -68,11 +68,10 @@
                 </picture>
             </div>
 
-            <div class="space3"></div>
+            <div class="space4"></div>
 
             <!-- Länkar som leder till ett formulär för att lägga till poster i menyn - öppnas i ett litet fönster -->
             <h1>Lägg till i menyn</h1>
-
             <h2><a href="#" class="menu-link" data-category="starters">Smårätter</a></h2>
             <h2><a href="#" class="menu-link" data-category="sallads">Sallad</a></h2>
             <h2><a href="#" class="menu-link" data-category="warms">Varm mat</a></h2>
@@ -87,218 +86,214 @@
             <div id="message-container"></div>
 
             <div class="list-container-adm">
-                <ul>
-                    <h2><u>Smårätter</u></h2>
-                </ul>
+                <h2>Smårätter</h2>
                 <ul id="startersListAdm"></ul>
-                <ul>
-                    <h2><u>Sallad</u></h2>
-                </ul>
+                <h2>Sallad</h2>
                 <ul id="salladsListAdm"></ul>
-                <ul>
-                    <h2><u>Varm mat</u></h2>
-                </ul>
+                <h2>Varm mat</h2>
                 <ul id="warmsListAdm"></ul>
-                <ul>
-                    <h2><u>Dessert</u></h2>
-                </ul>
+                <h2>Dessert</h2>
                 <ul id="dessertsListAdm"></ul>
-                <ul>
-                    <h2><u>Dryck</u></h2>
-                </ul>
+                <h2>Dryck</h2>
                 <ul id="drinksListAdm"></ul>
             </div>
-    </div>
 
-    <div class="space3"></div>
+            <div class="space4"></div>
 
+            <!-- Formulär för att uppdatera meny -->
+            <h1>Uppdatera meny</h1>
 
-    <!-- Formulär för att uppdatera meny -->
+            <div class="form-container">
 
-    <h1>Uppdatera meny</h1>
+                <form id="updateMenuForm">
 
-    <div class="update-container">
+                    <label for="name">Namn</label><br>
+                    <input type="text" id="name" name="name" placeholder="Namn" required><br>
 
-        <div class="message-container"></div>
+                    <label for="description">Beskrivning</label><br>
+                    <input type="text" id="description" name="description" placeholder="Beskrivning" required><br>
 
-        <form id="updateMenuForm">
+                    <label for="price">Pris</label><br>
+                    <input type="text" id="price" name="price" placeholder="Pris" required><br>
 
-            <label for="name">Namn</label><br>
-            <input type="text" id="name" name="name" required><br>
+                    <input type="submit" value="Uppdatera" class="button">
+                </form>
+            </div>
 
-            <label for="description">Beskrivning</label><br>
-            <input type="text" id="description" name="description" required><br>
+            <div class="space4"></div>
 
-            <label for="price">Pris</label><br>
-            <input type="text" id="price" name="price" required><br>
+            <h1>Meddelanden</h1>
 
-            <input type="submit" value="Uppdatera" class="button">
-        </form>
-    </div>
+            <div class="text-container"> Innehåll som läses ut dynamiskt från besöksidan...</div>
 
-    <div class="space3"></div>
+            <div class="space4"></div>
 
-    <h1>Meddelanden</h1>
+            <!-- Formulär för att registrera en ny användare för login-funktion till adminsidan -->
+            <h1>Registrera användare</h1>
 
-    <div class="text-container"> Innehåll som läses ut dynamiskt från besöksidan...</div>
+            <div class="message-container"></div>
 
-    <div class="space4"></div>
+            <div class="form-container">
 
-    <h1>Registrera användare</h1>
+                <form method="post" id="registerForm">
 
-    <h2><a href="register.html">Till registrering</a></h2>
+                    <label for="username">Användarnamn</label><br>
+                    <input type="text" id="username" name="username" placeholder="Användarnamn"><br>
 
-    <div class="space4"></div>
+                    <label for="password">Lösenord</label><br>
+                    <input type="text" id="password" name="password" placeholder="Lösenord"><br>
 
+                    <input type="submit" value="Registrera" class="button">
+                </form>
+            </div>
 
-    <!-- Litet fönster som öppnas med ett formulär för att lägga till poster i menyn -->
+            <div class="space4"></div>
 
-    <!-- Formulär för smårätter -->
-    <div id="menuStarters" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Lägg till nytt menyalternativ</h2>
-            <form method="post" id="addMenuStarters">
-                <label for="name">Namn</label><br>
-                <input type="text" id="name" name="name"><br>
-                <label for="description">Beskrivning</label><br>
-                <input type="text" id="description" name="description"><br>
-                <label for="price">Pris</label><br>
-                <input type="text" id="price" name="price"><br>
-                <input type="submit" value="Lägg till" class="button">
-            </form>
-        </div>
-    </div>
+            <!-- Litet fönster som öppnas med ett formulär för att lägga till poster i menyn -->
 
-    <!-- Formulär för sallad -->
-    <div id="menuSallads" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Lägg till nytt menyalternativ</h2>
-            <form method="post" id="addMenuSallads">
-                <label for="name">Namn</label><br>
-                <input type="text" id="name" name="name"><br>
-                <label for="description">Beskrivning</label><br>
-                <input type="text" id="description" name="description"><br>
-                <label for="price">Pris</label><br>
-                <input type="text" id="price" name="price"><br>
-                <input type="submit" value="Lägg till" class="button">
-            </form>
-        </div>
-    </div>
+            <!-- Formulär för smårätter -->
+            <div id="menuStarters" class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h2>Lägg till nytt menyalternativ</h2>
+                    <form method="post" id="addMenuStarters">
+                        <label for="name">Namn</label><br>
+                        <input type="text" id="name1" name="name"><br>
+                        <label for="description">Beskrivning</label><br>
+                        <input type="text" id="description1" name="description"><br>
+                        <label for="price">Pris</label><br>
+                        <input type="text" id="price1" name="price"><br>
+                        <input type="submit" value="Lägg till" class="button">
+                    </form>
+                </div>
+            </div>
 
-    <!-- Formulär för varma rätter -->
-    <div id="menuWarms" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Lägg till nytt menyalternativ</h2>
-            <form method="post" id="addMenuWarms">
-                <label for="name">Namn</label><br>
-                <input type="text" id="name" name="name"><br>
-                <label for="description">Beskrivning</label><br>
-                <input type="text" id="description" name="description"><br>
-                <label for="price">Pris</label><br>
-                <input type="text" id="price" name="price"><br>
-                <input type="submit" value="Lägg till" class="button">
-            </form>
-        </div>
-    </div>
+            <!-- Formulär för sallad -->
+            <div id="menuSallads" class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h2>Lägg till nytt menyalternativ</h2>
+                    <form method="post" id="addMenuSallads">
+                        <label for="name">Namn</label><br>
+                        <input type="text" id="name2" name="name"><br>
+                        <label for="description">Beskrivning</label><br>
+                        <input type="text" id="description2" name="description"><br>
+                        <label for="price">Pris</label><br>
+                        <input type="text" id="price2" name="price"><br>
+                        <input type="submit" value="Lägg till" class="button">
+                    </form>
+                </div>
+            </div>
 
-    <!-- Formulär för dessert -->
-    <div id="menuDesserts" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Lägg till nytt menyalternativ</h2>
-            <form method="post" id="addMenuDesserts">
-                <label for="name">Namn</label><br>
-                <input type="text" id="name" name="name"><br>
-                <label for="description">Beskrivning</label><br>
-                <input type="text" id="description" name="description"><br>
-                <label for="price">Pris</label><br>
-                <input type="text" id="price" name="price"><br>
-                <input type="submit" value="Lägg till" class="button">
-            </form>
-        </div>
-    </div>
+            <!-- Formulär för varma rätter -->
+            <div id="menuWarms" class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h2>Lägg till nytt menyalternativ</h2>
+                    <form method="post" id="addMenuWarms">
+                        <label for="name">Namn</label><br>
+                        <input type="text" id="name3" name="name"><br>
+                        <label for="description">Beskrivning</label><br>
+                        <input type="text" id="description3" name="description"><br>
+                        <label for="price">Pris</label><br>
+                        <input type="text" id="price3" name="price"><br>
+                        <input type="submit" value="Lägg till" class="button">
+                    </form>
+                </div>
+            </div>
 
-    <!-- Formulär för drycker -->
-    <div id="menuDrinks" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Lägg till nytt menyalternativ</h2>
-            <form method="post" id="addMenuDrinks">
-                <label for="name">Namn</label><br>
-                <input type="text" id="name" name="name"><br>
-                <label for="description">Beskrivning</label><br>
-                <input type="text" id="description" name="description"><br>
-                <label for="price">Pris</label><br>
-                <input type="text" id="price" name="price"><br>
-                <input type="submit" value="Lägg till" class="button">
-            </form>
-        </div>
-    </div>
+            <!-- Formulär för dessert -->
+            <div id="menuDesserts" class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h2>Lägg till nytt menyalternativ</h2>
+                    <form method="post" id="addMenuDesserts">
+                        <label for="name">Namn</label><br>
+                        <input type="text" id="name4" name="name"><br>
+                        <label for="description">Beskrivning</label><br>
+                        <input type="text" id="description4" name="description"><br>
+                        <label for="price">Pris</label><br>
+                        <input type="text" id="price4" name="price"><br>
+                        <input type="submit" value="Lägg till" class="button">
+                    </form>
+                </div>
+            </div>
 
-    </main>
+            <!-- Formulär för drycker -->
+            <div id="menuDrinks" class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h2>Lägg till nytt menyalternativ</h2>
+                    <form method="post" id="addMenuDrinks">
+                        <label for="name">Namn</label><br>
+                        <input type="text" id="name5" name="name"><br>
+                        <label for="description">Beskrivning</label><br>
+                        <input type="text" id="description5" name="description"><br>
+                        <label for="price">Pris</label><br>
+                        <input type="text" id="price5" name="price"><br>
+                        <input type="submit" value="Lägg till" class="button">
+                    </form>
+                </div>
+            </div>
+        </main>
 
-    <div class="space3"></div>
+        <!-- Footer med ikoner -->
+        <footer>
+            <div class="footer-container-left">
+                <p>Kontakt</p>
 
-    <!-- Footer med ikoner -->
-    <footer>
-        <div class="footer-container-left">
-            <p>Kontakt</p>
+                <div class="space1"></div>
+
+                <p><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;&nbsp;Tessingränd 1<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;123 45 Stockholm</p>
+
+                <div class="space2"></div>
+
+                <p><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;0733-12 34 56</p>
+
+                <div class="space2"></div>
+
+                <p><i class="fa-regular fa-envelope"></i>&nbsp;&nbsp;&nbsp;<a
+                        href=mailto:sali1502@student.miun.se>E-post</a></p>
+
+                <div class="space2"></div>
+
+                <p><i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;&nbsp;Facebook</p>
+
+                <div class="space2"></div>
+
+                <p><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;&nbsp;Instagram</p>
+
+            </div>
 
             <div class="space1"></div>
 
-            <p><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;&nbsp;Tessingränd 1<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;123 45 Stockholm</p>
+            <div class="footer-container-center">
+                <p>Öppettider</p>
 
-            <div class="space2"></div>
+                <div class="space1"></div>
 
-            <p><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;0733-12 34 56</p>
-
-            <div class="space2"></div>
-
-            <p><i class="fa-regular fa-envelope"></i>&nbsp;&nbsp;&nbsp;<a
-                    href=mailto:sali1502@student.miun.se>E-post</a></p>
-
-            <div class="space2"></div>
-
-            <p><i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;&nbsp;Facebook</p>
-
-            <div class="space2"></div>
-
-            <p><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;&nbsp;Instagram</p>
-
-        </div>
-
-        <div class="space1"></div>
-
-        <div class="footer-container-center">
-            <p>Öppettider</p>
+                <p><i class="fa-solid fa-calendar-days"></i>&nbsp;&nbsp;&nbsp;Må-Fre&nbsp;&nbsp;&nbsp;06:30-17:30</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lör&nbsp;&nbsp;&nbsp;09:00-15:00</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sön&nbsp;&nbsp;&nbsp;Stängt</p>
+            </div>
 
             <div class="space1"></div>
 
-            <p><i class="fa-solid fa-calendar-days"></i>&nbsp;&nbsp;&nbsp;Må-Fre&nbsp;&nbsp;&nbsp;06:30-17:30</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lör&nbsp;&nbsp;&nbsp;09:00-15:00</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sön&nbsp;&nbsp;&nbsp;Stängt</p>
-        </div>
+            <div class="footer-container-right">
+                <p><i class="fa-solid fa-lock-open"></i>&nbsp;&nbsp;&nbsp;<a href="login.html">Admin</a></p>
+            </div>
 
-        <div class="space1"></div>
+            <div class="space1"></div>
 
-        <div class="footer-container-right">
-            <p><i class="fa-solid fa-lock-open"></i>&nbsp;&nbsp;&nbsp;<a href="login.html">Admin</a></p>
-        </div>
+        </footer>
 
-        <div class="space1"></div>
-
-    </footer>
-
-    <script src="https://kit.fontawesome.com/89fb6a41df.js" crossorigin="anonymous"></script>
-    <script type="module" src="js/main.js"></script>
-    <script type="module" src="js/admin.js"></script>
-    <script type="module" src="js/menuadm.js"></script>
-    <script type="module" src="js/modal.js"></script>
-    <script type="module" src="js/token.js"></script>
+        <script src="https://kit.fontawesome.com/89fb6a41df.js" crossorigin="anonymous"></script>
+        <script type="module" src="js/main.js"></script>
+        <script type="module" src="js/admin.js"></script>
+        <script type="module" src="js/menuadm.js"></script>
+        <script type="module" src="js/modal.js"></script>
+        <script type="module" src="js/token.js"></script>
 
     </div>
 </body>

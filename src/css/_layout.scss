@@ -50,7 +50,7 @@ nav {
     position: absolute;
     right: 0;
     top: 100px;
-    height: 50vh;
+    height: 40vh;
     width: 250px;
     display: none;
     z-index: 999;
@@ -179,6 +179,7 @@ h1 {
 
 h2 {
     font: 100% base.$font-stack;
+    color: base.$primary-heading;
     font-size: 1.2em;
     padding-top: 2vh;
     padding-bottom: 2vh;
@@ -391,19 +392,23 @@ footer p {
 }
 
 .space1 {
-    height: 2vh;
-}
-
-.space2 {
     height: 1vh;
 }
 
+.space2 {
+    height: 2vh;
+}
+
 .space3 {
-    height: 10vh;
+    height: 3vh;
 }
 
 .space4 {
-    height: 5vh;
+    height: 4vh;
+}
+
+.space7 {
+    height: 7vh;
 }
 
 p {
@@ -424,15 +429,27 @@ p {
 }
 
 .message-container {
-    display: block;
+    text-align: block;
     justify-content: center;
     margin: 0 auto 0 auto;
     text-align: center;
-    font-size: 0.8em;
+    font-size: 1em;
+    line-height: 1.8em;
     color: base.$primary-text;
-    width: 100%;
-    height: auto;
-    padding-bottom: 1vh;
+    width: 40%;
+    padding-bottom: 2vh;
+}
+
+.message-container {
+    text-align: block;
+    justify-content: center;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    font-size: 1em;
+    line-height: 1.8em;
+    color: base.$primary-text;
+    width: 40%;
+    padding-bottom: 2vh;
 }
 
 .list-container ul {
@@ -489,17 +506,6 @@ p {
     color: base.$primary-text;
 }
 
-.update-container {
-    display: block;
-    justify-content: center;
-    margin: 0 auto 0 auto;
-    text-align: center;
-    font-size: 1em;
-    line-height: 1.8em;
-    color: base.$primary-text;
-    width: 30%;
-}
-
 /* Fönster som öppnas med formulär att lägga till i menyn */
 .modal {
     display: none;
@@ -553,7 +559,7 @@ p {
 .button {
     background-color: base.$primary-blue;
     color: white;
-    margin-top: 0.5vh;
+    margin-top: 1vh;
     border-radius: 30px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -645,7 +651,6 @@ p {
 }
 
 /* Större skärm - gör menyn som inline - fixerad header */
-@media only screen and (min-width: 1024px) {
 
     @media only screen and (min-width: 1024px) {
 
@@ -654,7 +659,10 @@ p {
             position: fixed;
             top: 0;
             left: 0;
+            right: 0;
             width: 100%;
+            max-width: 1512px;
+            margin: 0 auto;
             z-index: 1000;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
@@ -693,7 +701,7 @@ p {
             margin-top: 50px;
         }
     }
-}
+
 
 /* Design för mediumstor skärm */
 @media only screen and (max-width: 1024px) {
@@ -789,6 +797,7 @@ p {
         line-height: 1.8em;
         color: base.$primary-text;
         width: 50%;
+        margin-bottom: 5vh;
     }
 
     form {
@@ -969,6 +978,7 @@ p {
         line-height: 1.8em;
         color: base.$primary-text;
         width: 70%;
+        margin-bottom: 5vh;
     }
 
     form {
@@ -993,6 +1003,16 @@ p {
     }
 
     p {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    h1 {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    h2 { 
         margin-left: 5vw;
         margin-right: 5vw;
     }
