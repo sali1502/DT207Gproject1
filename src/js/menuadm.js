@@ -546,6 +546,7 @@ async function getWarmsAdm() {
         console.error("Ett fel uppstod vid hämtning av varmrätt: ", error);
     }
 }
+
 /* LÄGG TILL DATA - CRUD CREATE/POST */
 
 // Lägg till ny varmrätt
@@ -866,7 +867,6 @@ function displayMessage(message) {
 }
 
 
-
 /* DRYCK */
 
 let urlDrinksAdm = "http://localhost:3001/api/drinks";
@@ -1080,4 +1080,139 @@ async function deleteDrinksAdm(id) {
 function displayMessage(message) {
     let messageContainer = document.getElementById("message-container");
     messageContainer.innerText = message;
+}
+
+
+/* MEDDELANDEN */
+
+let urlMessages = "http://localhost:3001/api/messages";
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (document.getElementById("messageList")) {
+        getMessages();
+    }
+
+    const messages = document.getElementById('messageForm');
+    if (messages) {
+        messages.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const form = event.target;
+            createMessage(
+                form.name.value,
+                form.email.value,
+                form.message.value
+            );
+        });
+    }
+});
+
+// Hämta alla meddelanden och skriv ut till skärmen med radera-knapp
+async function getMessages() {
+    try {
+        const response = await fetch(urlMessages);
+        const data = await response.json();
+
+        let list = document.getElementById("messageList");
+        list.innerHTML = "";
+
+        data.forEach(item => {
+            let listItem = document.createElement("li");
+
+            let name = document.createElement("div");
+            name.className = "name";
+            name.textContent = item.name;
+            listItem.appendChild(name);
+
+            let email = document.createElement("div");
+            email.className = "email";
+            email.textContent = item.email;
+            listItem.appendChild(email);
+
+            let message = document.createElement("div");
+            message.className = "message";
+            message.textContent = item.message;
+            listItem.appendChild(message);
+
+            let date = document.createElement("div");
+            date.className = "date";
+            date.textContent = `Skickat: ${formatDate(item.created)}`;
+            listItem.appendChild(date);
+
+            let buttonContainer = document.createElement("div");
+            buttonContainer.className = "button-container";
+
+            let deleteButton = document.createElement("button");
+            deleteButton.className = "deleteBtn";
+            deleteButton.textContent = "Radera";
+            deleteButton.onclick = () => deleteMessage(item._id);
+            buttonContainer.appendChild(deleteButton);
+
+            listItem.appendChild(buttonContainer);
+            list.appendChild(listItem);
+        });
+
+    } catch (error) {
+        console.error("Ett fel uppstod vid hämtning av meddelanden: ", error);
+    }
+}
+
+// Lägg till nytt meddelande
+async function createMessage(name, email, message) {
+    const newMessage = { name, email, message };
+    try {
+        await fetch(urlMessages, {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(newMessage)
+        });
+        await getMessages();
+    } catch (error) {
+        console.error("Ett fel uppstod när meddelanden skulle läggas till: ", error);
+    }
+}
+
+// Radera meddelande
+async function deleteMessage(id) {
+    if (!id) {
+        console.error("Ingen id angiven för radering av meddelande");
+        return;
+    }
+
+    try {
+        const response = await fetch(`${urlMessages}/${id}`, {
+            method: "DELETE",
+            headers: {
+                "content-type": "application/json"
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error(`Något gick fel: ${response.statusText}`);
+        }
+
+        displayMessage("Meddelande raderat!");
+
+        await getMessages();
+    } catch (error) {
+        console.error("Ett fel uppstod vid radering av meddelande: ", error);
+    }
+}
+
+// Meddelande för raderat meddelande
+function displayMessage(message) {
+    let messageContainer = document.getElementById("message-container1");
+    messageContainer.innerText = message;
+    messageContainer.style.display = 'block';
+
+    setTimeout(() => {
+        messageContainer.style.display = 'none';
+    }, 3000);
+}
+
+// Formatera datum
+function formatDate(dateString) {
+    const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+    return new Date(dateString).toLocaleDateString('sv-SE', options);
 }

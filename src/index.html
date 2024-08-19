@@ -171,19 +171,19 @@
             </div>
 
             <!-- Formulär för att skicka meddelanden + animerad knapp -->
+            <div class="message-container"></div>
+ 
             <div class="form-container">
                 <form method="post" id="messageForm">
-
                     <label for="name">Namn</label><br>
                     <input type="text" id="name" name="name" placeholder="Namn" required><br>
-
+            
                     <label for="email">Epost</label><br>
-                    <input type="text" id="email" name="email" placeholder="Epost" required><br>
-
+                    <input type="email" id="email" name="email" placeholder="Epost" required><br>
+            
                     <label for="message">Meddelande</label><br>
-                    <textarea id="message" name="message" placeholder="Skriv ett meddelande här..."
-                        required></textarea><br>
-
+                    <textarea id="message" name="message" placeholder="Skriv ett meddelande här..." required></textarea><br>
+            
                     <input type="submit" value="Skicka" class="button">
                 </form>
             </div>

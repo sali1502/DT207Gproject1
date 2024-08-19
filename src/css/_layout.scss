@@ -407,6 +407,9 @@ footer p {
     height: 4vh;
 }
 
+.space5 {
+    height: 5vh;
+}
 .space7 {
     height: 7vh;
 }
@@ -440,7 +443,7 @@ p {
     padding-bottom: 2vh;
 }
 
-.message-container {
+.list-container-adm {
     text-align: block;
     justify-content: center;
     margin: 0 auto 0 auto;
@@ -483,6 +486,30 @@ p {
 .name {
     font-weight: bold;
     padding-top: 1vh;
+    padding-top: 2vh;
+}
+
+.name1 {
+    font-weight: bold;
+    padding-top: 1vh;
+    padding-top: 2vh;
+}
+
+
+.email {
+    padding-bottom: 2vh;
+}
+
+.message {
+
+    font-weight: bold;
+    padding-bottom: 2vh;
+}
+
+.date {
+
+    font-size: 0.8em;
+    padding-bottom: 4vh;
 }
 
 .price {
@@ -556,6 +583,7 @@ p {
 }
 
 // Animering - knapp som ändrar färg vid hover
+
 .button {
     background-color: base.$primary-blue;
     color: white;
@@ -969,6 +997,18 @@ p {
         width: 80%;
     }
 
+    .list-container-adm {
+        text-align: block;
+        justify-content: center;
+        margin: 0 auto 0 auto;
+        text-align: center;
+        font-size: 1em;
+        line-height: 1.8em;
+        color: base.$primary-text;
+        width: 80%;
+        padding-bottom: 2vh;
+    }
+
     .form-container {
         display: block;
         justify-content: center;
@@ -1008,11 +1048,6 @@ p {
     }
 
     h1 {
-        margin-left: 5vw;
-        margin-right: 5vw;
-    }
-
-    h2 { 
         margin-left: 5vw;
         margin-right: 5vw;
     }
