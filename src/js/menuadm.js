@@ -1097,7 +1097,7 @@ document.addEventListener('DOMContentLoaded', () => {
         messages.addEventListener('submit', function (event) {
             event.preventDefault();
             const form = event.target;
-            createMessage(
+            createMessages(
                 form.name.value,
                 form.email.value,
                 form.message.value
@@ -1144,7 +1144,7 @@ async function getMessages() {
             let deleteButton = document.createElement("button");
             deleteButton.className = "deleteBtn";
             deleteButton.textContent = "Radera";
-            deleteButton.onclick = () => deleteMessage(item._id);
+            deleteButton.onclick = () => deleteMessages(item._id);
             buttonContainer.appendChild(deleteButton);
 
             listItem.appendChild(buttonContainer);
@@ -1156,25 +1156,42 @@ async function getMessages() {
     }
 }
 
+/* LÄGG TILL DATA - CRUD CREATE/POST */
+
 // Lägg till nytt meddelande
-async function createMessage(name, email, message) {
-    const newMessage = { name, email, message };
+async function createMessages(name, email, message) {
+
+    let messages = {
+        name: name,
+        email: email,
+        message: message
+    }
+
     try {
-        await fetch(urlMessages, {
+        const response = await fetch(urlMessages, {
             method: "POST",
             headers: {
                 "content-type": "application/json"
             },
-            body: JSON.stringify(newMessage)
+            body: JSON.stringify(messages)
         });
+
+        const data = await response.json();
+        console.table(data);
+
         await getMessages();
+
     } catch (error) {
-        console.error("Ett fel uppstod när meddelanden skulle läggas till: ", error);
+        console.error("Ett fel uppstod när meddelande skulle läggas till: ", error);
     }
+
+    // Omdirigera till startsidan
+    window.location.href = "index.html";
 }
 
+/* DELETE */
 // Radera meddelande
-async function deleteMessage(id) {
+async function deleteMessages(id) {
     if (!id) {
         console.error("Ingen id angiven för radering av meddelande");
         return;
@@ -1202,7 +1219,7 @@ async function deleteMessage(id) {
 
 // Meddelande för raderat meddelande
 function displayMessage(message) {
-    let messageContainer = document.getElementById("message-container1");
+    let messageContainer = document.getElementById("message-container");
     messageContainer.innerText = message;
     messageContainer.style.display = 'block';
 
