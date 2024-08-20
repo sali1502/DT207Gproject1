@@ -86,14 +86,19 @@
             <div id="message-container"></div>
 
             <div class="list-container-adm">
+                <div class="space5"></div>
                 <h2>Smårätter</h2>
                 <ul id="startersListAdm"></ul>
+                <div class="space5"></div>
                 <h2>Sallad</h2>
                 <ul id="salladsListAdm"></ul>
+                <div class="space5"></div>
                 <h2>Varm mat</h2>
                 <ul id="warmsListAdm"></ul>
+                <div class="space5"></div>
                 <h2>Dessert</h2>
                 <ul id="dessertsListAdm"></ul>
+                <div class="space5"></div>
                 <h2>Dryck</h2>
                 <ul id="drinksListAdm"></ul>
             </div>
@@ -105,7 +110,7 @@
 
             <div class="form-container">
 
-                <form id="updateMenuForm">
+                <form autocomplete="off" id="updateMenuForm">
 
                     <label for="name">Namn</label><br>
                     <input type="text" id="name" name="name" placeholder="Namn" required><br>
@@ -122,22 +127,15 @@
 
             <div class="space5"></div>
 
-            <h1>Meddelanden</h1>
 
-            <div class="list-container-adm">
-                <ul id="messageList"></ul>
-            </div>
-
-            <div class="space5"></div>
-
-            <!-- Formulär för att registrera ny användare för login-funktion -->
+            <!-- Formulär för att registrera ny användare -->
             <h1>Registrera användare</h1>
 
             <div class="message-container"></div>
 
             <div class="form-container">
 
-                <form method="post" id="registerForm">
+                <form autocomplete="off" method="post" id="registerForm">
 
                     <label for="username">Användarnamn</label><br>
                     <input type="text" id="username" name="username" placeholder="Användarnamn"><br>
@@ -151,6 +149,15 @@
 
             <div class="space5"></div>
 
+            <!-- Meddelanden från gäster -->
+            <h1>Meddelanden</h1>
+
+            <div class="list-container-adm">
+                <ul id="messageList"></ul>
+            </div>
+
+            <div class="space5"></div>
+
             <!-- Litet fönster som öppnas med ett formulär för att lägga till poster i menyn -->
 
             <!-- Formulär för smårätter -->
@@ -158,7 +165,7 @@
                 <div class="modal-content">
                     <span class="close-button">&times;</span>
                     <h2>Lägg till nytt menyalternativ</h2>
-                    <form method="post" id="addMenuStarters">
+                    <form autocomplete="off" method="post" id="addMenuStarters">
                         <label for="name">Namn</label><br>
                         <input type="text" id="name1" name="name"><br>
                         <label for="description">Beskrivning</label><br>
@@ -175,7 +182,7 @@
                 <div class="modal-content">
                     <span class="close-button">&times;</span>
                     <h2>Lägg till nytt menyalternativ</h2>
-                    <form method="post" id="addMenuSallads">
+                    <form autocomplete="off" method="post" id="addMenuSallads">
                         <label for="name">Namn</label><br>
                         <input type="text" id="name2" name="name"><br>
                         <label for="description">Beskrivning</label><br>
@@ -192,7 +199,7 @@
                 <div class="modal-content">
                     <span class="close-button">&times;</span>
                     <h2>Lägg till nytt menyalternativ</h2>
-                    <form method="post" id="addMenuWarms">
+                    <form autocomplete="off" method="post" id="addMenuWarms">
                         <label for="name">Namn</label><br>
                         <input type="text" id="name3" name="name"><br>
                         <label for="description">Beskrivning</label><br>
@@ -209,7 +216,7 @@
                 <div class="modal-content">
                     <span class="close-button">&times;</span>
                     <h2>Lägg till nytt menyalternativ</h2>
-                    <form method="post" id="addMenuDesserts">
+                    <form autocomplete="off" method="post" id="addMenuDesserts">
                         <label for="name">Namn</label><br>
                         <input type="text" id="name4" name="name"><br>
                         <label for="description">Beskrivning</label><br>
@@ -226,7 +233,7 @@
                 <div class="modal-content">
                     <span class="close-button">&times;</span>
                     <h2>Lägg till nytt menyalternativ</h2>
-                    <form method="post" id="addMenuDrinks">
+                    <form autocomplete="off" method="post" id="addMenuDrinks">
                         <label for="name">Namn</label><br>
                         <input type="text" id="name5" name="name"><br>
                         <label for="description">Beskrivning</label><br>
