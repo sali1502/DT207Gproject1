@@ -2,8 +2,11 @@
 
 /* Logga in och registrera användare */
 
+/* REGISTRERING */
+
+// Registrering av ny användare med användarnam och lösenord
 document.addEventListener("DOMContentLoaded", () => {
-    // Registrering av användare
+
     const registerForm = document.getElementById("registerForm");
 
     if (registerForm) {
@@ -36,7 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Login av användare
+    /* LOGGA IN och LOGGA UT */
+
+    // Funktion för att logga in med skyddad route och token
     const loginForm = document.getElementById("loginForm");
 
     if (loginForm) {
@@ -82,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Skyddad sida med logut-funktion och token
+    // Skyddad sida med funktion för att logga ut
     const token = localStorage.getItem("token");
 
     if (window.location.pathname.endsWith("admin.html")) {
@@ -127,6 +132,8 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.removeItem("token");
         window.location.href = "index.html";
     }
+
+    /* MEDDELANDEN */
 
     // Funktion för att hantera meddelanden
     function displayMessage(message, type) {

@@ -1,6 +1,6 @@
 /* Projekt, DT207G Backend-baserad webbutveckling, Åsa Lindskog sali1502@student.miun.se */
 
-/* Meny */
+/* MENY */
 
 // Hämta meny-knappar
 let openBtn = document.getElementById("open-menu");
@@ -25,7 +25,7 @@ function toggleMenu() {
     }
 }
 
-/* Karta */
+/* KARTA */
 
 /* Leaflet karta med markör */
 var map = L.map('map').setView([59.343, 18.095], 13);

@@ -50,7 +50,7 @@ nav {
     position: absolute;
     right: 0;
     top: 100px;
-    height: 40vh;
+    height: 50vh;
     width: 250px;
     display: none;
     z-index: 999;
@@ -410,6 +410,7 @@ footer p {
 .space5 {
     height: 5vh;
 }
+
 .space7 {
     height: 7vh;
 }
@@ -573,7 +574,6 @@ p {
 }
 
 // Animering - knapp som ändrar färg vid hover
-
 .button {
     background-color: base.$primary-blue;
     color: white;
@@ -625,7 +625,7 @@ p {
 
 /* Media queries */
 
-/* dark mode */
+/* Dark mode */
 @media (prefers-color-scheme: dark) {
 
     .grid-container {
@@ -670,58 +670,58 @@ p {
 
 /* Större skärm - gör menyn som inline - fixerad header */
 
-    @media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
 
-        header {
-            padding: 0 3em;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            width: 100%;
-            max-width: 1512px;
-            margin: 0 auto;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .menu-btn {
-            display: none;
-        }
-
-        #open-menu {
-            display: none !important;
-        }
-
-        nav {
-            display: block !important;
-            position: static;
-            box-shadow: none;
-            height: auto;
-            font-size: 1em;
-            width: auto;
-        }
-
-        nav ul {
-            height: 100%;
-        }
-
-        nav li {
-            display: inline;
-            padding: 1.2em 0;
-        }
-
-        main {
-            margin-top: 100px;
-        }
-
-        footer {
-            margin-top: 50px;
-        }
+    header {
+        padding: 0 3em;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: 1512px;
+        margin: 0 auto;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
+    .menu-btn {
+        display: none;
+    }
+
+    #open-menu {
+        display: none !important;
+    }
+
+    nav {
+        display: block !important;
+        position: static;
+        box-shadow: none;
+        height: auto;
+        font-size: 1em;
+        width: auto;
+    }
+
+    nav ul {
+        height: 100%;
+    }
+
+    nav li {
+        display: inline;
+        padding: 1.2em 0;
+    }
+
+    main {
+        margin-top: 100px;
+    }
+
+    footer {
+        margin-top: 50px;
+    }
+}
 
 /* Design för mediumstor skärm */
+
 @media only screen and (max-width: 1024px) {
 
     .hero-container-large {

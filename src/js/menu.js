@@ -5,18 +5,19 @@
 
 /* Funktion för att hämta och skriva ut meny till sidan för besökare */
 
-/* Smårätter */
+/* SMÅRÄTTER */
+
 let urlStarters = "http://localhost:3001/api/starters";
 
 document.addEventListener('DOMContentLoaded', (event) => {
 
-    // Kolla om element för att skriva ut data finns
+    // Kolla om element för att skriva ut smårätter finns
     if (document.getElementById("startersList")) {
-        // Om det finns, hämta data
+        // Om det finns, hämta smårätter
         getStarters();
     }
 
-    // Hämta data och läs ut till skärmen
+    // Hämta smårätter och läs ut till skärmen
     async function getStarters() {
         try {
             const response = await fetch(urlStarters);
@@ -53,18 +54,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 });
 
-/* Sallad */
+/* SALLAD */
+
 let urlSallads = "http://localhost:3001/api/sallads";
 
 document.addEventListener('DOMContentLoaded', (event) => {
 
-    // Kolla om element för att skriva ut data finns
+    // Kolla om element för att skriva ut sallad finns
     if (document.getElementById("salladsList")) {
-        // Om det finns, hämta data
+        // Om det finns, hämta sallad
         getSallads();
     }
 
-    // Hämta data och läs ut till skärmen
+    // Hämta sallad och läs ut till skärmen
     async function getSallads() {
         try {
             const response = await fetch(urlSallads);
@@ -96,24 +98,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
             });
 
         } catch (error) {
-            console.error("Ett fel uppstod vid hämtning av starters: ", error);
+            console.error("Ett fel uppstod vid hämtning av sallad: ", error);
         }
     }
 });
 
+/* VARMA RÄTTER */
 
-/* Varma rätter */
 let urlWarms = "http://localhost:3001/api/warms";
 
 document.addEventListener('DOMContentLoaded', (event) => {
 
-    // Kolla om element för att skriva ut data finns
+    // Kolla om element för att skriva ut varmrätter finns
     if (document.getElementById("warmsList")) {
-        // Om det finns, hämta data
+        // Om det finns, hämta varmrätter
         getWarms();
     }
 
-    // Hämta data och läs ut till skärmen
+    // Hämta varmrätter och läs ut till skärmen
     async function getWarms() {
         try {
             const response = await fetch(urlWarms);
@@ -145,23 +147,23 @@ document.addEventListener('DOMContentLoaded', (event) => {
             });
 
         } catch (error) {
-            console.error("Ett fel uppstod vid hämtning av starters: ", error);
+            console.error("Ett fel uppstod vid hämtning av varmrätt: ", error);
         }
     }
 });
 
-/* Dessert */
+/* DESSERT */
 let urlDesserts = "http://localhost:3001/api/desserts";
 
 document.addEventListener('DOMContentLoaded', (event) => {
 
-    // Kolla om element för att skriva ut data finns
+    // Kolla om element för att skriva ut dessert finns
     if (document.getElementById("dessertsList")) {
-        // Om det finns, hämta data
+        // Om det finns, hämta dessert
         getDesserts();
     }
 
-    // Hämta data och läs ut till skärmen
+    // Hämta dessert och läs ut till skärmen
     async function getDesserts() {
         try {
             const response = await fetch(urlDesserts);
@@ -193,24 +195,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
             });
 
         } catch (error) {
-            console.error("Ett fel uppstod vid hämtning av starters: ", error);
+            console.error("Ett fel uppstod vid hämtning av dessert: ", error);
         }
     }
 });
 
 
-/* Dryck */
+/* DRYCK */
 let urlDrinks = "http://localhost:3001/api/drinks";
 
 document.addEventListener('DOMContentLoaded', (event) => {
 
-    // Kolla om element för att skriva ut data finns
+    // Kolla om element för att skriva ut dryck finns
     if (document.getElementById("drinksList")) {
-        // Om det finns, hämta data
+        // Om det finns, hämta dryck
         getDrinks();
     }
 
-    // Hämta data och läs ut till skärmen
+    // Hämta dryck och läs ut till skärmen
     async function getDrinks() {
         try {
             const response = await fetch(urlDrinks);
@@ -242,7 +244,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             });
 
         } catch (error) {
-            console.error("Ett fel uppstod vid hämtning av starters: ", error);
+            console.error("Ett fel uppstod vid hämtning av dryck: ", error);
         }
     }
 });

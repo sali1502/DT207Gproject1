@@ -1,5 +1,8 @@
 @use 'base';
 
+
+// Linje som ändrar färg (under header)
+
 @keyframes colorChangeBar {
 
     0% {
@@ -15,6 +18,8 @@
     }
 }
 
+
+// Knapp som ändrar färg
 
 @keyframes btnHover {
 

@@ -220,7 +220,6 @@ function displayMessage(message) {
 }
 
 
-
 /* SALLAD */
 
 let urlSalladsAdm = "http://localhost:3001/api/sallads";
@@ -331,6 +330,7 @@ async function getSalladsAdm() {
         console.error("Ett fel uppstod vid hämtning av sallad: ", error);
     }
 }
+
 /* LÄGG TILL DATA - CRUD CREATE/POST */
 
 // Lägg till ny sallad
@@ -433,8 +433,6 @@ function displayMessage(message) {
     let messageContainer = document.getElementById("message-container");
     messageContainer.innerText = message;
 }
-
-
 
 /* WARMS */
 
@@ -649,7 +647,6 @@ function displayMessage(message) {
     let messageContainer = document.getElementById("message-container");
     messageContainer.innerText = message;
 }
-
 
 /* DESSERTS */
 
@@ -1189,7 +1186,8 @@ async function createMessages(name, email, message) {
     window.location.href = "index.html";
 }
 
-/* DELETE */
+/* RADERA DATA - CRUD DELETE/DELETE */
+
 // Radera meddelande
 async function deleteMessages(id) {
     if (!id) {

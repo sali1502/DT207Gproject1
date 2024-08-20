@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.style.display = 'none';
     }
 
-    // Hantera öppning av fönster
+    // Öppning av fönster - olika kategorier
     document.querySelectorAll('.menu-link').forEach(link => {
         link.addEventListener('click', function (event) {
             event.preventDefault();
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Hantera stängning av fönster
+    // Stängning av fönster - olika kategorier
     document.querySelectorAll('.close-button').forEach(button => {
         button.addEventListener('click', function () {
             closeModal('menuStarters');
