@@ -311,6 +311,14 @@ input[type=text] {
     margin-bottom: 1vh;
 }
 
+input[type=password] {
+    width: 100%;
+    padding: 5px;
+    border-radius: 4px;
+    margin-top: 0.5vh;
+    margin-bottom: 1vh;
+}
+
 textarea {
     width: 100%;
     height: 10vh;
@@ -829,6 +837,15 @@ p {
         margin-top: 0.5vh;
         margin-bottom: 1vh;
     }
+    input[type=password] {
+        width: 100%;
+        padding: 5px;
+        border-radius: 4px;
+        margin-top: 0.5vh;
+        margin-bottom: 1vh;
+    }
+
+
 
     textarea {
         width: 100%;
@@ -1016,6 +1033,14 @@ p {
     }
 
     input[type=text] {
+        width: 100%;
+        padding: 5px;
+        border-radius: 4px;
+        margin-top: 0.5vh;
+        margin-bottom: 1vh;
+    }
+
+    input[type=password] {
         width: 100%;
         padding: 5px;
         border-radius: 4px;
