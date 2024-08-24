@@ -50,7 +50,7 @@ nav {
     position: absolute;
     right: 0;
     top: 100px;
-    height: 50vh;
+    height: 60vh;
     width: 250px;
     display: none;
     z-index: 999;
@@ -672,6 +672,52 @@ p {
         color: base.$primary-text-darkm !important;
     }
 
+    .form-container {
+        color: base.$primary-text-darkm !important;
+    }
+
+    .message-container {
+        color: base.$primary-text-darkm !important;
+    }
+    
+    .list-container-adm {
+        color: base.$primary-text-darkm !important;
+    }
+    
+    .list-container ul {
+        color: base.$primary-text-darkm !important;
+    }
+    
+    .list-container h2 {
+        color: base.$primary-text-darkm !important;
+    }
+    
+    .list-container-adm ul {
+        color: base.$primary-text-darkm !important;
+    }
+    
+    .list-container-adm h2 {
+        color: base.$primary-text-darkm !important;
+    }
+    
+    .name {
+        color: base.$primary-text-darkm !important;
+    }
+    
+    .email {
+        color: base.$primary-text-darkm !important;
+    }
+    
+    .message {
+        color: base.$primary-text-darkm !important;
+    }
+    
+    .date {
+        color: base.$primary-text-darkm !important;
+    }
+    .menu-link {
+        color: base.$primary-text-darkm !important;
+    }
 }
 
 /* Större skärm - gör menyn som inline - fixerad header */
